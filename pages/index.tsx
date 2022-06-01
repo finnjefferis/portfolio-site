@@ -1,8 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import React, { useState } from 'react'
+
+
 
 const Home: NextPage = () => {
+  const [anim, setAnim] = useState(false)
+  
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
@@ -23,22 +28,35 @@ const Home: NextPage = () => {
           
         </p>
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full click:animate-ping">
+        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full"
+          
+          >
           <a
-            href="https://nextjs.org/docs"
+            href="https://github.com/finnjefferis/super-quicksort"
             className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
           >
+             <button
+          className={`${
+            anim && "animate-wiggle"
+          } bg-blue-500 p-4 text-white rounded hover:bg-blue-700 hover:shadow-xl`}
+          onClick={() => {
+            setAnim(true);
+          }}
+          onAnimationEnd={() => setAnim(false)}
+        >
             <h3 className="text-2xl font-bold ">
               super-quicksort &rarr;
             </h3>
             <p className="mt-4 text-xl">
             Quick-sort algorithm written in Python using termplotlib to visualise results in-console. Developed for educational purposes.
             </p>
+            </button>
           </a>
 
           <a
-            href="https://nextjs.org/learn"
+            href="https://github.com/finnjefferis/react-form-builder"
             className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            
           >
             <h3 className="text-2xl font-bold">react-form-builder &rarr;</h3>
             <p className="mt-4 text-xl">
@@ -47,16 +65,18 @@ const Home: NextPage = () => {
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href="https://github.com/finnjefferis/with-tailwindcss-app"
             className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
           >
             <h3 className="text-2xl font-bold">website-portfolio &rarr;</h3>
             <p className="mt-4 text-xl">
-              Reposiory for this landing page
+              Repository for this landing page
             </p>
           </a>
 
-          <a className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600 hover:animate-pulse">
+          <a 
+          href="https://github.com/richard-dentalplus/v4"
+          className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600 hover:animate-ping">
             <h3 className="text-2xl font-bold">v4&rarr;</h3>
             <p className="mt-4 text-xl">
               <div>
@@ -67,9 +87,9 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
+      {/* <footer className="flex h-24 w-full items-center justify-center border-t">
       
-      </footer>
+      </footer> */}
     </div>
   )
 }
