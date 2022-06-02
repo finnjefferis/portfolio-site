@@ -20,17 +20,17 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-5xl font-bold">
           Hi there, I'm {" "}
           <a className="font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-blue-600 to purple-700" href="https://github.com/finnjefferis">
-            Finn {"    "}
+            Finn
           </a>
         </h1>
 
-        <p className="mt-3 text-xl">
+        <div className="mt-3 text-xl">
           Junior software developer focusing on React and Node.js.
           
-        </p>
+        </div>
 
         <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full"
           
