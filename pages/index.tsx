@@ -75,101 +75,20 @@ const Home: NextPage = () => {
 
               <div className="section">
                 <div className="text-center ">
-                  <p>About me</p>
-                  <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full"
-
->
-<a
-  href="https://github.com/finnjefferis/super-quicksort"
-  className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
->
-   <button
-className={`${
-  anim && "animate-ping"
-} bg-blue-500 p-4 text-white rounded hover:bg-blue-700 hover:shadow-xl`}
-onClick={() => {
-  setAnim(true);
-}}
-onAnimationEnd={() => setAnim(false)}
->
-  <h3 className="text-2xl font-bold ">
-    super-quicksort &rarr;
-  </h3>
-  <p className="mt-4 text-xl">
-  Quick-sort algorithm written in Python using termplotlib to visualise results in-console. Developed for educational purposes.
-  </p>
-  </button>
-</a>
-
-<a
-  href="https://github.com/finnjefferis/react-form-builder"
-  className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-
->
-  <button
-className={`${
-  anim1 && "animate-ping"
-} bg-blue-500 p-4 text-white rounded hover:bg-blue-700 hover:shadow-xl`}
-onClick={() => {
-  setAnim1(true);
-}}
-onAnimationEnd={() => setAnim1(false)}
->
-  <h3 className="text-2xl font-bold">react-form-builder &rarr;</h3>
-  <p className="mt-4 text-xl">
-    Forked from Kiho/react-form-builder. Used in version 4 of Admor DentalPlus software
-  </p>
-  </button>
-</a>
-
-<a
-  href="https://github.com/finnjefferis/with-tailwindcss-app"
-  className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
->
-  <button
-className={`${
-  anim2 && "animate-ping"
-} bg-blue-500 p-4 text-white rounded hover:bg-blue-700 hover:shadow-xl`}
-onClick={() => {
-  setAnim2(true);
-}}
-onAnimationEnd={() => setAnim2(false)}
->
-
-  <h3 className="text-2xl font-bold">website-portfolio &rarr;</h3>
-  <p className="mt-4 text-xl">
-    Repository for this landing page
-  </p>
-  </button>
-</a>
-
-<a
-href="https://github.com/richard-dentalplus/v4"
-className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600">
-    <button
-className={`${
-  anim3 && "animate-ping"
-} bg-blue-500 p-4 text-white rounded hover:bg-blue-700 hover:shadow-xl`}
-onClick={() => {
-  setAnim3(true);
-}}
-onAnimationEnd={() => setAnim3(false)}
->
-  <h3 className="text-2xl font-bold">v4&rarr;</h3>
-  <p className="mt-4 text-xl">
-    <div>
-      Version 4 of Admor DentalPlus software. My current project!
-    </div>
-  </p>
-  </button>
-</a>
-</div>
+                  <p className="text-5xl text-accent font-semibold">About me</p>
+                  <p>1 year web developer experience using React, Next.js, Node, Electron, </p>
+                  <p>Frontend technologies: HTML, CSS, Tailwind, Javascript, React, Next.js</p>
+                  <p>Backend technologies: Node, Express, MongoDB, GraphQL, Apollo, Prisma, MySQL </p>
+                  <p> Dev tools: Git, NPM, </p>
+                 
                 </div>
               </div>
             
               <div className="section min-h-screen bg-base-200">
                 <div className=" text-center">
-                  <p>Section 2</p>
+                  <p className="text-secondary font-semibold text-5xl">Experience</p>
+                  <p> Previous projects: Signage, V4, this website</p>
+                  <p>Experience: Shore Group, DentalPlus, A Levels </p>
                   
                 </div>
               </div>
