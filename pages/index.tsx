@@ -117,12 +117,13 @@ const Home: NextPage = () => {
                         {' '}
                         Web developer with a focus on React and Node.js.
                       </p>
-                      <button
-                        className="btn btn-outline btn-accent w-full   "
+                 
+                   
+                        
                       
-                      >
-                        <a href="https://github.com/finnjefferis">Github</a>
-                      </button>
+                  
+                        <a href="https://github.com/finnjefferis"      className="btn btn-outline btn-accent w-full   ">Github</a>
+                  
                    
                    
                     </div>
@@ -135,7 +136,11 @@ const Home: NextPage = () => {
                   <p className="text-secondary font-semibold text-5xl">Experience</p>
                   <p> Previous projects: Signage, V4, this website</p>
                   <p>Experience: Shore Group, DentalPlus, A Levels </p>
-                  
+                  <div className="flex flex-col w-full lg:flex-row">
+  <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div> 
+  <div className="divider lg:divider-horizontal">OR</div> 
+  <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div>
+</div>       
                 </div>
               </div>
 
