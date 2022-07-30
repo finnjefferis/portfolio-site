@@ -11,10 +11,10 @@ import {
 import Head from 'next/head'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
-import Marquee, { Motion, randomIntFromInterval } from 'react-marquee-slider'
-import times from 'lodash/times'
+
+
 import ReactFullpage from '@fullpage/react-fullpage'
-import { renderToHTML } from 'next/dist/server/render'
+
 import { themeChange } from 'theme-change'
 
 const Fullpage = () => (
@@ -179,7 +179,7 @@ const Home = () => {
                 <div className="absolute top-5  left-5 font-bungee-shade text-5xl font-semibold text-accent">
                   Get in touch
                 </div>
-                <footer className="footer footer-center absolute bottom-0 bg-primary p-10 text-primary-content">
+                <footer className="footer footer-center absolute bottom-0 bg-accent p-10 text-primary-content">
                   <div>
                     <svg
                       width="50"
