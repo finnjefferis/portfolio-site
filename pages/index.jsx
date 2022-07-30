@@ -17,41 +17,143 @@ import ReactFullpage from '@fullpage/react-fullpage'
 
 import { themeChange } from 'theme-change'
 
-const Fullpage = () => (
-  <ReactFullpage
-    //fullpage options
-    licenseKey={'YOUR_KEY_HERE'}
-    scrollingSpeed={1000} /* Options here */
-    render={({ state, fullpageApi }) => {
-      return (
-        <div>
-          <ReactFullpage.Wrapper>
-            <div className="section">
-              <p>Section 1 (welcome to fullpage.js)</p>
-              <button onClick={() => fullpageApi.moveSectionDown()}>
-                Click me to move down
-              </button>
-            </div>
-            <div className="section">
-              <p>Section 2</p>
-            </div>
-          </ReactFullpage.Wrapper>
-        </div>
-      )
-    }}
-  />
-)
+const themes = [
+  'dracula',
+  'light',
+  'cupcake',
+  'dark',
+'bumblebee',
+'emerald',
+'corporate',
+'synthwave',
+'retro',
+'cyberpunk',
+'valentine',
+'halloween',
+'garden',
+'forest',
+'aqua',
+'lofi',
+'pastel',
+'fantasy',
+'wireframe',
+'black',
+'cmyk',
+'autumn',
+'acid',
+
+]
+
+ 
 
 const Home = () => {
-  const [theme, setTheme] = useState('dracula')
+  let randomNumber = Math.floor(Math.random()*themes.length);
+  const [theme, setTheme] = useState(themes[randomNumber])
   useEffect(() => {
     themeChange(false)
     // 👆 false parameter is required for react project
   }, [])
 
+  
+ 
+
+ 
+
   function lightTheme() {
     setTheme('light')
   }
+
+  function cupcakeTheme() {
+    setTheme('cupcake')
+  }
+
+  function bumblebeeTheme() {
+    setTheme('bumblebee')
+  }
+
+  function emeraldTheme() {
+    setTheme('emerald')
+  }
+  function corporateTheme() {
+    setTheme('corporate')
+  }
+
+  function synthwaveTheme() {
+    setTheme('synthwave')
+  }
+  function retroTheme() {
+    setTheme('retro')
+  }
+
+  function cyberpunkTheme() {
+    setTheme('cyberpunk')
+  }
+
+  function valentineTheme() {
+    setTheme('valentine')
+  }
+
+  function halloweenTheme() {
+    setTheme('halloween')
+  }
+
+  function gardenTheme() {
+    setTheme('garden')
+  }
+
+  function forestTheme() {
+    setTheme('forest')
+  }
+
+  function aquaTheme() {
+    setTheme('aqua')
+  }
+
+  function lofiTheme() {
+    setTheme('lofi')
+  }
+
+  function pastelTheme() {
+    setTheme('pastel')
+  }
+
+  function fantasyTheme() {
+    setTheme('fantasy')
+  }
+
+  function wireframeTheme() {
+    setTheme('wireframe')
+  }
+
+  function blackTheme() {
+    setTheme('black')
+  }
+
+  function cmykTheme() {
+    setTheme('cmyk')
+  }
+
+  function autumnTheme() {
+    setTheme('autumn')
+  }
+
+  function acidTheme() {
+    setTheme('acid')
+  }
+
+  function lemonadeTheme() {
+    setTheme('lemonade')
+  }
+
+  function coffeeTheme() {
+    setTheme('coffee')
+  }
+
+  function winterTheme() {
+    setTheme('winter')
+  }
+
+
 
   function darkTheme() {
     setTheme('dark')
@@ -78,14 +180,15 @@ const Home = () => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section ">
+                
                 <div className="  hero">
-                <div className="dropdown absolute top-5 left-5">
+                {/* <div className="dropdown absolute top-5 left-5">
                             <label tabIndex="0" className="btn m-1">
                               Theme
                             </label>
                             <ul
                               tabIndex="0"
-                              className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 text-secondary shadow "
+                              className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 text-secondary shadow overflow-scroll"
                             >
                               <li>
                                 <a onClick={lightTheme}>Light</a>
@@ -101,17 +204,87 @@ const Home = () => {
                               <li>
                                 <a onClick={businessTheme}>Business</a>
                               </li>
+
+                              <li>
+                                <a onClick={cupcakeTheme}>Cupcake</a>
+                              </li>
+
+                              <li>
+                                <a onClick={bumblebeeTheme}>Bumblebee</a>
+                              </li>
+                              <li>
+                                <a onClick={corporateTheme}>Corporate</a>
+                              </li>
+                              <li>
+                                <a onClick={synthwaveTheme}>Synthwave</a>
+                              </li>
+                              <li>
+                                <a onClick={retroTheme}>Retro</a>
+                              </li>
+                              <li>
+                                <a onClick={cyberpunkTheme}>Cyberpunk</a>
+                              </li>
+                              <li>
+                                <a onClick={valentineTheme}>Valentine</a>
+                              </li>
+                              <li>
+                                <a onClick={halloweenTheme}>Halloween</a>
+                              </li>
+                              <li>
+                                <a onClick={gardenTheme}>Garden</a>
+                              </li> <li>
+                                <a onClick={forestTheme}>Forest</a>
+                              </li> <li>
+                                <a onClick={aquaTheme}>Aqua</a>
+                              </li> <li>
+                                <a onClick={lofiTheme}>lofi</a>
+                              </li>
+                              <li>
+                                <a onClick={pastelTheme}>Pastel</a>
+                              </li>
+                              <li>
+                                <a onClick={fantasyTheme}>Fantasy</a>
+                              </li>
+                              <li>
+                                <a onClick={wireframeTheme}>Wireframe</a>
+                              </li>
+                              <li>
+                                <a onClick={blackTheme}>Black</a>
+                              </li>
+                              <li>
+                                <a onClick={cmykTheme}>cymk</a>
+                              </li>
+                              <li>
+                                <a onClick={autumnTheme}>Autumn</a>
+                              </li>
+                              <li>
+                                <a onClick={acidTheme}>Acid</a>
+                              </li>
+                              <li>
+                                <a onClick={lemonadeTheme}>Lemonade</a>
+                              </li>
+                              <li>
+                                <a onClick={coffeeTheme}>Coffee</a>
+                              </li>
+                              <li>
+                                <a onClick={winterTheme}>Winter</a>
+                              </li>
+                             
+                            
+
+
                             </ul>
-                          </div>
+                          </div> */}
+                 
                      
                 
                   <div className=" text-center">
                     
                     <div className="max-w-md">
-                      <h1 className="font-bungee-shade text-6xl font-bold text-accent sm:text-xl md:text-7xl lg:text-7xl">
+                      <h1 className="font-bungee-shade text-6xl font-bold text-primary sm:text-xl md:text-7xl lg:text-7xl">
                         Finn
                       </h1>
-                      <h1 className="font-bungee-shade text-6xl font-bold text-accent sm:text-xl md:text-7xl lg:text-7xl">
+                      <h1 className="font-bungee-shade text-6xl font-bold text-primary sm:text-xl md:text-7xl lg:text-7xl">
                         Jefferis
                       </h1>
                       <p className="text-l py-6 sm:text-xl md:text-2xl">
@@ -121,12 +294,20 @@ const Home = () => {
 
                       <a
                         href="https://github.com/finnjefferis"
-                        className="btn btn-outline btn-accent w-48 md:w-56 lg:w-64"
+                        className="btn btn-outline btn-accent w-48 md:w-56 lg:w-64 m-5"
                       >
                         Github
                       </a>
+           
+                      <div className=" btn btn-base    ">{theme} </div>
                     </div>
+                    <a className="btn btn-primary m-1">primary</a>
+                      <a className="btn btn-secondary m-1">secondary</a>
+                      <a className="btn btn-accent m-1">accent</a>
+                    
+              
                   </div>
+                  
                 </div>
               </div>
 

@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         "bungee-shade": ["Bungee Shade"],
+        "arvo": ["Arvo"],
       },
       keyframes: {
         wiggle: {
@@ -29,16 +30,7 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: [
-      {
-     
-      },
-      "dark",
-      "luxury",
-      "light",
-      "business",
-      "dracula"
-    ],
+    themes: ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
   },
 
 };
