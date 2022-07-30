@@ -41,6 +41,10 @@ const themes = [
 'cmyk',
 'autumn',
 'acid',
+'lemonade',
+'night',
+'coffee',
+'winter',
 
 ]
 
