@@ -183,7 +183,7 @@ const Home = () => {
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="section " id="why-me">
+      <div className="section " >
         <div className="text-center text-primary  ">
         <div className="wrapper z-10">
       <motion.div
@@ -305,35 +305,23 @@ const Home = () => {
      
        
 
-   About me section, a little bit about myself and my experience / projects.
-  
-          <div className="items-center justify-center space-x-5 space-y-5 md:flex">
-            <div className="item ">
-              <div className="mockup-code ">
+
+   <div className="mockup-code md:mx-96 my-5"  id="why-me">
                 <pre data-prefix="$">
-                  <code>Upgrade to a codebase that is</code>
+                  <code>Upgrade to a website that is</code>
                 </pre>
                 <pre data-prefix=">" className="text-warning">
                   <code>installing...</code>
                 </pre>
                
-                <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
-                <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
+            
+             
                 <pre data-prefix=">" className="text-warning">
                   <code>installing...</code>
                 </pre>
                 <pre data-prefix=">" className="text-warning">
                   <code>painless to maintain...</code>
-                </pre>   <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
-                <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
+                </pre>   
              
                 <pre data-prefix=">" className="text-warning">
                   <code>installing...</code>
@@ -347,32 +335,23 @@ const Home = () => {
                 <pre data-prefix=">" className="text-warning">
                   <code>installing...</code>
                 </pre>
-                <pre data-prefix=">" className="text-warning">
+              
+                 <pre data-prefix=">" className="text-warning">
                   <code>installing...</code>
-                </pre>    <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>    <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>    <pre data-prefix=">" className="text-warning">
-                  <code></code>
-                </pre>    <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>    <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>    <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>    <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>  
+                </pre>    
                 <pre data-prefix=">" className="bg-warning text-warning-content">
-                  <code>runs beautifully</code>
+                  <code>shockingly fast</code>
                 </pre>
               </div>{' '}
+  
+          <div className="items-center justify-center space-x-5 space-y-5 md:flex" >
+            <div className="item ">
+              
             </div>
             <div className="item  ">
               <div className="mockup-window border bg-base-300">
-                <div className="flex justify-center bg-base-200 bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text md:p-40 text-5xl font-semibold text-transparent">
-                <div className="bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text text-5xl font-semibold text-transparent my-20 ">Looks shite</div>
+                <div className="flex justify-center bg-base-200 bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text md:px-80  md:py-40 text-5xl font-semibold text-transparent">
+                <div className="bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text text-5xl font-semibold text-transparent my-20 ">Looks stunning</div>
                 </div>
               </div>
             </div>
