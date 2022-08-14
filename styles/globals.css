@@ -3,3 +3,19 @@
 @tailwind utilities;
 
 @import "../public/fonts/font.css";
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    width: 100vw;
+    height: 300vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(180deg, #40f, #05f);
+  }
+  
+
+  

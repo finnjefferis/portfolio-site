@@ -8,11 +8,18 @@ import {
   SiPostgresql,
 } from 'react-icons/si'
 
+
+import { motion, useScroll, useTransform } from "framer-motion";
+
 import Head from 'next/head'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 
 import { themeChange } from 'theme-change'
+
+
+
+
 
 const themes = [
   'dracula',
@@ -38,7 +45,11 @@ const themes = [
   'winter',
 ]
 
+
 const Home = () => {
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+
   useEffect(() => {
     let scrollToWhyMe = document.querySelector('#scroll-why-me')
     let whyMe = document.querySelector('#why-me')
@@ -61,6 +72,8 @@ const Home = () => {
     // 👆 false parameter is required for react project
     setTheme(themes[randomNumber])
   }, [])
+
+  
 
   function lightTheme() {
     setTheme('light')
@@ -100,17 +113,12 @@ const Home = () => {
     setTheme('halloween')
   }
 
-  function gardenTheme() {
-    setTheme('garden')
-  }
+
 
   function forestTheme() {
     setTheme('forest')
   }
 
-  function aquaTheme() {
-    setTheme('aqua')
-  }
 
   function lofiTheme() {
     setTheme('lofi')
@@ -167,17 +175,35 @@ const Home = () => {
   function businessTheme() {
     setTheme('business')
   }
+
+  
   return (
     <div data-theme={theme}>
       <Head>
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <div className="section " id="why-me">
+        <div className="text-center text-primary  ">
+        <div className="wrapper z-10">
+      <motion.div
+        className="container"
+        style={{
+          scale
+        }}
+      >
+        <motion.div
+          className="item"
+          style={{
+            scaleY: scrollYProgress
+          }}
+        />
+      </motion.div>
+    </div>
       <div className=" ">
         <div className="hero  min-h-screen">
           <div className="mask-parallelogram-4 inline-block min-h-full min-w-full gap-1 overflow-hidden">
-            <div className=" w- h-screen origin-top-left -rotate-45 transform bg-gradient-to-r from-primary via-accent to-secondary"></div>
+            <div className="  min-h-screen origin-top-right -rotate-45 transform bg-gradient-to-r from-primary via-accent to-secondary"></div>
           </div>
           <div className="dropdown absolute top-5 left-5 z-20">
             <label tabIndex="0" className="btn m-1">
@@ -217,9 +243,7 @@ const Home = () => {
               <li>
                 <a onClick={forestTheme}>Forest</a>
               </li>{' '}
-              <li>
-                <a onClick={aquaTheme}>Aqua</a>
-              </li>{' '}
+            
               <li>
                 <a onClick={lofiTheme}>lofi</a>
               </li>
@@ -243,32 +267,30 @@ const Home = () => {
 
           <div className=" z-10 text-center">
             <div className=" ">
-              <h1 className="font-bungee-shade text-5xl font-bold text-base-content   sm:text-xl md:text-7xl lg:text-7xl">
+              <h1 className="font-bungee-shade text-5xl font-bold text-base-content   sm:text-xl md:text-7xl lg:text-7xl  md:bg-gradient-to-r from-primary via-accent to-secondary md:text-transparent md:bg-clip-text">
                 Finn Jefferis
               </h1>
-              {/* <h1 className="font-bungee-shade text-5xl font-bold text-primary-content sm:text-xl md:text-7xl lg:text-7xl">
-    
-                      </h1> */}
-              <p className="text-l py-6 font-semibold text-base-content sm:text-xl md:text-2xl">
+            
+              <p className="text-l py-6 font-semibold text-base-content sm:text-xl md:text-2xl md:bg-gradient-to-r from-primary via-accent to-secondary md:text-transparent md:bg-clip-text">
                 {' '}
                 Web developer with a focus on React and Node.js.
               </p>
 
               <a
                 href="https://github.com/finnjefferis"
-                className="btn btn-outline btn-accent m-5 w-48 md:w-56 lg:w-64 "
+                className="btn btn-accent m-5 w-48 md:w-56 lg:w-64 "
               >
                 Github
               </a>
             </div>
             <a
-              className="btn btn-outline btn-primary z-10 m-1"
+              className="btn btn-primary z-10 m-1"
               id="scroll-why-me"
             >
               Why Me?
             </a>
             <a
-              className="btn btn-outline btn-secondary z-10 m-1"
+              className="btn  btn-secondary z-10 m-1"
               id="scroll-contact-me"
             >
               Get in Touch
@@ -277,54 +299,93 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="section " id="why-me">
-        <div className="text-center text-primary  ">
-          <p className="font-bungee-shade text-5xl  font-semibold text-accent  ">
-            Why me?
-          </p>
+      
 
-          <p>Responsive</p>
-          <p>
-            Mobile-first ensures that your website targets the devices your
-            customers love.
-          </p>
-          <p>
-            Cutting-edge technologies to ensure your website is competitive on
-            the modern web.
-          </p>
-          <p>No bloat</p>
-          <p>Fantastic value for your money.</p>
-          <div class="items-center justify-center space-x-5 space-y-5 md:flex">
-            <div class="item ">
-              <div class="mockup-code ">
+          
+     
+       
+
+   About me section, a little bit about myself and my experience / projects.
+  
+          <div className="items-center justify-center space-x-5 space-y-5 md:flex">
+            <div className="item ">
+              <div className="mockup-code ">
                 <pre data-prefix="$">
-                  <code>Upgrade to a codebase that</code>
+                  <code>Upgrade to a codebase that is</code>
                 </pre>
-                <pre data-prefix=">" class="text-warning">
+                <pre data-prefix=">" className="text-warning">
                   <code>installing...</code>
                 </pre>
-                <pre data-prefix=">" class="text-success">
-                  <code>Runs beautifully</code>
+               
+                <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>
+                <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>
+                <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>
+                <pre data-prefix=">" className="text-warning">
+                  <code>painless to maintain...</code>
+                </pre>   <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>
+                <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>
+             
+                <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>
+                <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>
+                <pre data-prefix=">" className="text-warning">
+                  <code>secure by design...</code>
+                </pre>
+                <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>
+                <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>    <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>    <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>    <pre data-prefix=">" className="text-warning">
+                  <code></code>
+                </pre>    <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>    <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>    <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>    <pre data-prefix=">" className="text-warning">
+                  <code>installing...</code>
+                </pre>  
+                <pre data-prefix=">" className="bg-warning text-warning-content">
+                  <code>runs beautifully</code>
                 </pre>
               </div>{' '}
             </div>
-            <div class="item  ">
-              <div class="mockup-window border bg-base-300">
-                <div class="flex justify-center bg-base-200 bg-gradient-to-r from-primary to-secondary bg-clip-text p-60 text-5xl font-semibold text-transparent">
-                  Looks stunning
+            <div className="item  ">
+              <div className="mockup-window border bg-base-300">
+                <div className="flex justify-center bg-base-200 bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text md:p-40 text-5xl font-semibold text-transparent">
+                <div className="bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text text-5xl font-semibold text-transparent my-20 ">Looks shite</div>
                 </div>
               </div>
             </div>
-            <div class="item  ">
-              <div class="mockup-phone border-primary">
-                <div class="camera"></div>
-                <div class="display">
-                  <div class="artboard artboard-demo phone-1">
-                    <div className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-5xl font-semibold text-transparent my-20">
-                      Stays perfect
+            <div className="item">
+              <div className="mockup-phone border-primary">
+                <div className="camera"></div>
+                <div className="display">
+                  <div className="artboard artboard-demo phone-1">
+                    <div className="bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text text-5xl font-semibold text-transparent my-20 ">
+                      Consistent
                     </div>
                     <div className="">
-                    even on mobile
+                    on any device
                     </div>
                     
                   </div>
@@ -332,6 +393,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+          
 
           <p>
             Frontend technologies: HTML, CSS, Tailwind, Javascript, React,
@@ -346,30 +408,28 @@ const Home = () => {
       </div>
 
       <div className="section" id="contact-me">
-        <div className=" font-bungee-shade text-5xl font-semibold text-accent">
-          Get in touch
-        </div>
+   
 
-        <div class="  md:flex">
-          <div class="item w-full  bg-primary">
+        <div className="  md:flex">
+          <div className="item w-full  bg-primary">
             <div>Pitch me</div>
-            <div class="flex flex-col items-center justify-center">
-              <div class="item">
+            <div className="flex flex-col items-center justify-center">
+              <div className="item">
                 <input
                   type="text"
                   placeholder="Name"
-                  class="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full max-w-xs"
                 />
               </div>
-              <div class="item ">
+              <div className="item ">
                 <textarea
-                  class="textarea textarea-bordered"
+                  className="textarea textarea-bordered"
                   placeholder="Bio"
                 ></textarea>
               </div>
             </div>
           </div>
-          <div class="item w-full  bg-secondary">
+          <div className="item w-full  bg-secondary">
             <div>Contact me</div>
             <div>Phone: 077777 29983</div>
             <div>Email: finnjefferis@gmail.com</div>
