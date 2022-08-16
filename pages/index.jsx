@@ -1,4 +1,5 @@
 import { AiFillHtml5, AiFillGithub } from 'react-icons/ai'
+
 import { FaCss3Alt, FaReact } from 'react-icons/fa'
 import {
   SiJavascript,
@@ -8,18 +9,15 @@ import {
   SiPostgresql,
 } from 'react-icons/si'
 
+import { FiFramer } from 'react-icons/fi'
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useAnimation } from 'framer-motion'
 
 import Head from 'next/head'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 
 import { themeChange } from 'theme-change'
-
-
-
-
 
 const themes = [
   'dracula',
@@ -45,10 +43,9 @@ const themes = [
   'winter',
 ]
 
-
 const Home = () => {
-  const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+  const { scrollYProgress } = useScroll()
+  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2])
 
   useEffect(() => {
     let scrollToWhyMe = document.querySelector('#scroll-why-me')
@@ -72,8 +69,6 @@ const Home = () => {
     // 👆 false parameter is required for react project
     setTheme(themes[randomNumber])
   }, [])
-
-  
 
   function lightTheme() {
     setTheme('light')
@@ -113,12 +108,9 @@ const Home = () => {
     setTheme('halloween')
   }
 
-
-
   function forestTheme() {
     setTheme('forest')
   }
-
 
   function lofiTheme() {
     setTheme('lofi')
@@ -176,182 +168,214 @@ const Home = () => {
     setTheme('business')
   }
 
-  
   return (
     <div data-theme={theme}>
       <Head>
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="section " >
+      <div className="section ">
         <div className="text-center text-primary  ">
-        <div className="wrapper z-10">
-      <motion.div
-        className="container"
-        style={{
-          scale
-        }}
-      >
-        <motion.div
-          className="item"
-          style={{
-            scaleY: scrollYProgress
-          }}
-        />
-      </motion.div>
-    </div>
-      <div className=" ">
-        <div className="hero  min-h-screen">
-          <div className="mask-parallelogram-4 inline-block min-h-full min-w-full gap-1 overflow-hidden">
-            <div className="  min-h-screen origin-top-right -rotate-45 transform bg-gradient-to-r from-primary via-accent to-secondary"></div>
-          </div>
-          <div className="dropdown absolute top-5 left-5 z-20">
-            <label tabIndex="0" className="btn m-1">
-              {theme}
-            </label>
-            <ul
-              tabIndex="0"
-              className="dropdown-content menu rounded-box   overflow-scroll bg-accent p-2 text-white   shadow lg:h-auto"
-            >
-              <li>
-                <a onClick={lightTheme}>Light</a>
-              </li>
-              <li>
-                <a onClick={darkTheme}>Dark</a>
-              </li>
-              <li>
-                <a onClick={draculaTheme}>Dracula</a>
-              </li>
-              <li>
-                <a onClick={businessTheme}>Business</a>
-              </li>
-              <li>
-                <a onClick={bumblebeeTheme}>Bumblebee</a>
-              </li>
-              <li>
-                <a onClick={corporateTheme}>Corporate</a>
-              </li>
-              <li>
-                <a onClick={synthwaveTheme}>Synthwave</a>
-              </li>
-              <li>
-                <a onClick={cyberpunkTheme}>Cyberpunk</a>
-              </li>
-              <li>
-                <a onClick={halloweenTheme}>Halloween</a>
-              </li>
-              <li>
-                <a onClick={forestTheme}>Forest</a>
-              </li>{' '}
-            
-              <li>
-                <a onClick={lofiTheme}>lofi</a>
-              </li>
-              <li>
-                <a onClick={fantasyTheme}>Fantasy</a>
-              </li>
-              <li>
-                <a onClick={blackTheme}>Black</a>
-              </li>
-              <li>
-                <a onClick={autumnTheme}>Autumn</a>
-              </li>
-              <li>
-                <a onClick={coffeeTheme}>Coffee</a>
-              </li>
-              <li>
-                <a onClick={winterTheme}>Winter</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className=" z-10 text-center">
-            <div className=" ">
-              <h1 className="font-bungee-shade text-5xl font-bold text-base-content   sm:text-xl md:text-7xl lg:text-7xl  md:bg-gradient-to-r from-primary via-accent to-secondary md:text-transparent md:bg-clip-text">
-                Finn Jefferis
-              </h1>
-            
-              <p className="text-l py-6 font-semibold text-base-content sm:text-xl md:text-2xl md:bg-gradient-to-r from-primary via-accent to-secondary md:text-transparent md:bg-clip-text">
-                {' '}
-                Web developer with a focus on React and Node.js.
-              </p>
-
-              <a
-                href="https://github.com/finnjefferis"
-                className="btn btn-accent m-5 w-48 md:w-56 lg:w-64 "
-              >
-                Github
-              </a>
-            </div>
-            <a
-              className="btn btn-primary z-10 m-1"
-              id="scroll-why-me"
-            >
-              Why Me?
-            </a>
-            <a
-              className="btn  btn-secondary z-10 m-1"
-              id="scroll-contact-me"
-            >
-              Get in Touch
-            </a>
-          </div>
-        </div>
-      </div>
-
-      
-
-          
-     
+          <div className="wrapper z-10">
        
+           
+          </div>
+          <div className=" ">
+            <div className="hero  min-h-screen">
+              <div className="mask-parallelogram-4 inline-block min-h-full min-w-full gap-1 overflow-hidden">
+                <div className="  min-h-screen origin-top-right -rotate-45 transform bg-gradient-to-r from-primary via-accent to-secondary"></div>
+              </div>
+              <div className="dropdown absolute top-5 left-5 z-20">
+                <label tabIndex="0" className="btn m-1">
+                  {theme}
+                </label>
+                <ul
+                  tabIndex="0"
+                  className="dropdown-content menu rounded-box   overflow-scroll bg-accent p-2 text-accent-content   shadow lg:h-auto"
+                >
+                  <li>
+                    <a onClick={lightTheme}>Light</a>
+                  </li>
+                  <li>
+                    <a onClick={darkTheme}>Dark</a>
+                  </li>
+                  <li>
+                    <a onClick={draculaTheme}>Dracula</a>
+                  </li>
+                  <li>
+                    <a onClick={businessTheme}>Business</a>
+                  </li>
+                  <li>
+                    <a onClick={bumblebeeTheme}>Bumblebee</a>
+                  </li>
+                  <li>
+                    <a onClick={corporateTheme}>Corporate</a>
+                  </li>
+                  <li>
+                    <a onClick={synthwaveTheme}>Synthwave</a>
+                  </li>
+                  <li>
+                    <a onClick={cyberpunkTheme}>Cyberpunk</a>
+                  </li>
+                  <li>
+                    <a onClick={halloweenTheme}>Halloween</a>
+                  </li>
+                  <li>
+                    <a onClick={forestTheme}>Forest</a>
+                  </li>{' '}
+                  <li>
+                    <a onClick={lofiTheme}>lofi</a>
+                  </li>
+                  <li>
+                    <a onClick={fantasyTheme}>Fantasy</a>
+                  </li>
+                  <li>
+                    <a onClick={blackTheme}>Black</a>
+                  </li>
+                  <li>
+                    <a onClick={autumnTheme}>Autumn</a>
+                  </li>
+                  <li>
+                    <a onClick={coffeeTheme}>Coffee</a>
+                  </li>
+                  <li>
+                    <a onClick={winterTheme}>Winter</a>
+                  </li>
+                </ul>
+              </div>
 
+              <div className=" z-10 text-center">
+                <div>
+                  <h1 className="from-primary via-accent to-secondary font-bungee-shade   text-5xl font-bold text-base-content  sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-7xl md:text-transparent lg:text-7xl">
+                    Finn Jefferis
+                  </h1>
 
-   <div className="mockup-code md:mx-96 my-5"  id="why-me">
-                <pre data-prefix="$">
-                  <code>Upgrade to a website that is</code>
-                </pre>
-                <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
-               
-            
-             
-                <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
-                <pre data-prefix=">" className="text-warning">
-                  <code>painless to maintain...</code>
-                </pre>   
-             
-                <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
-                <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
-                <pre data-prefix=">" className="text-warning">
-                  <code>secure by design...</code>
-                </pre>
-                <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>
-              
-                 <pre data-prefix=">" className="text-warning">
-                  <code>installing...</code>
-                </pre>    
-                <pre data-prefix=">" className="bg-warning text-warning-content">
-                  <code>shockingly fast</code>
-                </pre>
-              </div>{' '}
-  
-          <div className="items-center justify-center space-x-5 space-y-5 md:flex" >
-            <div className="item ">
-              
+                  <p className="text-l from-primary via-accent to-secondary py-6 font-semibold text-base-content sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-2xl md:text-transparent">
+                    {' '}
+                    Web developer with a focus on React and Node.js.
+                  </p>
+
+                  <a
+                    href="https://github.com/finnjefferis"
+                    className="btn btn-accent m-5 w-48 md:w-56 lg:w-64 "
+                  >
+                    Github
+                  </a>
+                </div>
+                <a className="btn btn-primary z-10 m-1" id="scroll-why-me">
+                  Why Me?
+                </a>
+                <a
+                  className="btn  btn-secondary z-10 m-1"
+                  id="scroll-contact-me"
+                >
+                  Get in Touch
+                </a>
+              </div>
             </div>
+          </div>
+          <div className="mockup-code my-5 md:mx-96" id="why-me">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0 }}
+            >
+              <pre data-prefix="$" className="text-warning">
+                <code>Upgrade to a website that is</code>
+              </pre>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.1 }}
+            >
+              <pre data-prefix=">" className="">
+                <code>installing...</code>
+              </pre>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.2 }}
+            >
+              <pre data-prefix=">" className="">
+                <code>installing...</code>
+              </pre>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.3 }}
+            >
+              <pre data-prefix=">" className="text-warning">
+                <code>painless to maintain...</code>
+              </pre>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.4 }}
+            >
+              <pre data-prefix=">" className="">
+                <code>installing...</code>
+              </pre>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.5 }}
+            >
+              <pre data-prefix=">" className="">
+                <code>installing...</code>
+              </pre>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.6 }}
+            >
+              <pre data-prefix=">" className="text-warning ">
+                <code>secure by design...</code>
+              </pre>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.7 }}
+            >
+              <pre data-prefix=">" className="">
+                <code>installing...</code>
+              </pre>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-5, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.8 }}
+            >
+              <pre data-prefix=">" className="">
+                <code>installing...</code>
+              </pre>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-15, 0], opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5, delay: 0.9 }}
+            >
+              <pre data-prefix=">" className="bg-warning text-warning-content">
+                <code>shockingly fast</code>
+              </pre>
+            </motion.div>
+          </div>{' '}
+          <div className="items-center justify-center space-x-5 space-y-5 md:flex">
+            <div className="item "></div>
             <div className="item  ">
               <div className="mockup-window border bg-base-300">
-                <div className="flex justify-center bg-base-200 bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text md:px-80  md:py-40 text-5xl font-semibold text-transparent">
-                <div className="bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text text-5xl font-semibold text-transparent my-20 ">Looks stunning</div>
+                <div className="flex justify-center bg-base-200 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-5xl  font-semibold text-transparent md:px-80 md:py-40">
+                  <div className="my-20 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-5xl font-semibold text-transparent ">
+                    Looks stunning
+                  </div>
                 </div>
               </div>
             </div>
@@ -360,61 +384,66 @@ const Home = () => {
                 <div className="camera"></div>
                 <div className="display">
                   <div className="artboard artboard-demo phone-1">
-                    <div className="bg-gradient-to-r from-primary to-secondary via-accent bg-clip-text text-5xl font-semibold text-transparent my-20 ">
+                    <div className="my-20 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-5xl font-semibold text-transparent ">
                       Consistent
                     </div>
-                    <div className="">
-                    on any device
-                    </div>
-                    
+                    <div className="">on any device</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div>
+            Modern Tools
+            <div class="grid grid-cols-2 grid-rows-2 gap-2 overflow-hidden">
+              <div class="box row-span-2 bg-primary">
+                {' '}
+                <div className="item  bg-primary-content rounded-full items-center text-center content-center">
+                  <FaReact size={70} />
+                  React
+                </div>
+                <div className="item bg-primary-content rounded-full">
+                  <SiNextdotjs size={70} />
+                  Next.js
+                </div>
+                <div className="item bg-primary-content rounded-full">
+                  <SiNodedotjs size={70} />
+                  Node.js
+                </div>
+              </div>
+              <div class="box bg-secondary">
+                {' '}
+                <div className="item h-32 w-32 bg-secondary-content">
+                  {' '}
+                  <SiTailwindcss size={70} />
+                  Tailwind
+                </div>
+                <div className="item h-32 w-32 bg-secondary-content">
+                  {' '}
+                  <FiFramer size={70} />
+                  Framer Motion
+                </div>
+              </div>
+              <div class="box bg-accent">
+                <div className="item h-32 w-32 bg-accent-content">
+                  {' '}
+                  <SiPostgresql size={70} />
+                  PostgreSQL
+                </div>
+              </div>
+            </div>
+           
+          </div>
           
-
-          <p>
-            Frontend technologies: HTML, CSS, Tailwind, Javascript, React,
-            Next.js
-          </p>
-          <p>
-            Backend technologies: Node, Express, PostgreSQL, GraphQL, Apollo,
-            Prisma, MySQL{' '}
-          </p>
-          <p> Dev tools: Git, NPM, </p>
+ 
         </div>
       </div>
 
       <div className="section" id="contact-me">
-   
-
-        <div className="  md:flex">
-          <div className="item w-full  bg-primary">
-            <div>Pitch me</div>
-            <div className="flex flex-col items-center justify-center">
-              <div className="item">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="input input-bordered w-full max-w-xs"
-                />
-              </div>
-              <div className="item ">
-                <textarea
-                  className="textarea textarea-bordered"
-                  placeholder="Bio"
-                ></textarea>
-              </div>
-            </div>
-          </div>
-          <div className="item w-full  bg-secondary">
-            <div>Contact me</div>
-            <div>Phone: 077777 29983</div>
-            <div>Email: finnjefferis@gmail.com</div>
-          </div>
+        <div className="  md:flex bg-base-100">
+         
         </div>
-        <footer className="footer footer-center bg-accent p-10 text-primary-content">
+        <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
           <div>
             <svg
               width="50"
