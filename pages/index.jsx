@@ -27,20 +27,20 @@ const themes = [
   'cupcake',
 
 
-  'emerald',
+
   'corporate',
   'synthwave',
   'cyberpunk',
 
   'forest',
-  'aqua',
+ 
   'lofi',
   'fantasy',
 
   'black',
   'autumn',
   
-  'night',
+
   'coffee',
   'winter',
 ]
@@ -207,8 +207,14 @@ const Home = () => {
           <div className=" ">
             <div className="hero  min-h-screen">
               <motion.div variants={title} initial="hidden" animate="visible" className="mask-parallelogram-4 inline-block min-h-full min-w-full gap-1 overflow-hidden">
-                <div className="  min-h-screen origin-top-right -rotate-45 transform bg-gradient-to-r from-primary via-accent to-secondary"></div>
+                <div className="  h-screen origin-top-left  md:origin-top-right -rotate-45 transform bg-gradient-to-r from-primary via-accent to-secondary"></div>
+               
               </motion.div>
+              <motion.div variants={title} initial="hidden" animate="visible" className="mask-parallelogram-4 inline-block min-h-full min-w-full gap-1 overflow-hidden">
+              <div className="  h-screen origin-bottom-right  md:origin-top-right -rotate-45 transform bg-gradient-to-r from-primary via-accent to-secondary"></div>
+               
+              </motion.div>
+            
               <motion.div variants={title} initial="hidden" animate="visible" className="dropdown absolute top-5 left-5 z-20">
                 <label tabIndex="0" className="btn m-1">
                   {theme}
@@ -261,7 +267,7 @@ const Home = () => {
 
               <div className=" z-10 text-center">
                 <div>
-                  <motion.h1 variants={name} initial="hidden" animate="visible" className="from-primary via-accent to-secondary font-bungee-shade   text-5xl font-bold text-base-content  sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-7xl md:text-transparent lg:text-7xl">
+                  <motion.h1 variants={name} initial="hidden" animate="visible" className="from-primary via-accent to-secondary font-bungee-shade   text-5xl font-bold   sm:text-xl bg-gradient-to-r bg-clip-text md:text-7xl text-transparent lg:text-7xl">
                Finn Jefferis
                 <br />
                
@@ -269,7 +275,7 @@ const Home = () => {
 
                   
 
-                  <motion.h1 variants={sentence} initial="hidden" animate="visible"  className="text-l from-primary via-accent to-secondary py-6 font-semibold text-base-content sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-2xl md:text-transparent">
+                  <motion.h1 variants={sentence} initial="hidden" animate="visible"  className="text-l from-primary via-accent to-secondary py-6 font-semibold  sm:text-xl bg-gradient-to-r bg-clip-text md:text-2xl text-transparent">
              
                 {line1.split("").map((char, index) => {
                   return (
