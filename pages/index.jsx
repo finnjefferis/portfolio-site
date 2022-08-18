@@ -48,7 +48,7 @@ const themes = [
 const Home = () => {
   //animation consts for text animation
 
-  const line1 = "Web developer with a focus on React and Node.js"
+  const line1 = "Web developer focusing on Next.js."
   
 
   const sentence = {
@@ -267,7 +267,7 @@ const Home = () => {
 
               <div className=" z-10 text-center">
                 <div>
-                  <motion.h1 variants={name} initial="hidden" animate="visible" className=" p-2 text-left from-primary via-accent to-secondary font-bungee-shade   text-5xl font-extrabold   sm:text-xl bg-gradient-to-r bg-clip-text md:text-7xl text-transparent lg:text-7xl">
+                  <motion.h1 variants={name} initial="hidden" animate="visible" className="m-1 my-4 text-left from-primary via-accent to-secondary font-bungee-shade   text-5xl font-extrabold   sm:text-xl bg-gradient-to-r bg-clip-text md:text-7xl text-transparent lg:text-7xl">
                Finn Jefferis
                 <br />
                
@@ -275,7 +275,7 @@ const Home = () => {
 
                   
 
-                  <motion.h1 variants={sentence} initial="hidden" animate="visible"  className="text-l from-primary via-accent to-secondary py-6 font-semibold  sm:text-xl bg-gradient-to-r bg-clip-text md:text-2xl text-transparent">
+                  <motion.h1 variants={sentence} initial="hidden" animate="visible"  className="text-l from-primary via-accent to-secondary font-semibold  sm:text-xl bg-gradient-to-r bg-clip-text md:text-2xl text-transparent">
              
                 {line1.split("").map((char, index) => {
                   return (
@@ -291,7 +291,7 @@ const Home = () => {
 
                   <motion.a variants={title} initial="hidden" animate="visible"
                     href="https://github.com/finnjefferis"
-                    className="btn btn-accent m-5 w-48 md:w-56 lg:w-64  ">
+                    className="btn btn-accent my-5  ">
                   
                     Github
                   </motion.a>
