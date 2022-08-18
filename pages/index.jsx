@@ -19,6 +19,8 @@ import React, { useState, useEffect } from 'react'
 
 import { themeChange } from 'theme-change'
 
+import { useInView } from 'react-intersection-observer'
+
 const themes = [
   'dracula',
   'light',
@@ -44,8 +46,56 @@ const themes = [
 ]
 
 const Home = () => {
-  const { scrollYProgress } = useScroll()
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2])
+  //animation consts for scrolling text animation
+  const text = 'Finn Jefferis' // This would normally be passed into this component as a prop!
+
+  const ctrls = useAnimation()
+
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+
+    triggerOnce: true,
+  })
+
+  const wordAnimation = {
+    hidden: {},
+
+    visible: {},
+  }
+
+  const characterAnimation = {
+    hidden: {
+      opacity: 0,
+
+      y: `0.25em`,
+    },
+
+    visible: {
+      opacity: 1,
+
+      y: `0em`,
+
+      transition: {
+        duration: 1,
+
+        ease: [0.2, 0.65, 0.3, 0.9],
+      },
+    },
+  }
+
+  //svg path animation
+  const icon = {
+    hidden: {
+      pathLength: 0,
+      fill: "rgba(255, 255, 255, 0)"
+    },
+    visible: {
+      pathLength: 1,
+      fill: "rgba(255, 255, 255, 1)"
+    }
+  }
+
+
 
   // useEffect(() => {
   //   // let scrollToWhyMe = document.querySelector('#scroll-why-me')
@@ -176,10 +226,7 @@ const Home = () => {
       </Head>
       <div className="section ">
         <div className="text-center text-primary  ">
-          <div className="wrapper z-10">
-       
-           
-          </div>
+          <div className="wrapper z-10"></div>
           <div className=" ">
             <div className="hero  min-h-screen">
               <div className="mask-parallelogram-4 inline-block min-h-full min-w-full gap-1 overflow-hidden">
@@ -247,8 +294,42 @@ const Home = () => {
               <div className=" z-10 text-center">
                 <div>
                   <h1 className="from-primary via-accent to-secondary font-bungee-shade   text-5xl font-bold text-base-content  sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-7xl md:text-transparent lg:text-7xl">
-                    Finn Jefferis
+                  <div className=";
+
+mr-5">
+            {text.split(' ').map((word, index) => {
+              return (
+                <motion.div 
+                  ref={ref}
+                  aria-hidden="true"
+                  key={index}
+                  initial="hidden"
+                  animate={ctrls}
+                  variants={wordAnimation}
+                  transition={{
+                    delayChildren: index * 0.25,
+
+                    staggerChildren: 0.05,
+                  }}
+                >
+                  {word.split('').map((character, index) => {
+                    return (
+                      <motion.div className="inline-block mr-1    "
+                        aria-hidden="true"
+                        key={index}
+                        variants={characterAnimation}
+                      >
+                        {character}
+                      </motion.div>
+                    )
+                  })}
+                </motion.div>
+              )
+            })}
+            </div>
                   </h1>
+
+                  
 
                   <p className="text-l from-primary via-accent to-secondary py-6 font-semibold text-base-content sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-2xl md:text-transparent">
                     {' '}
@@ -358,15 +439,7 @@ const Home = () => {
                 <code>installing...</code>
               </pre>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ y: [-15, 0], opacity: 1 }}
-              transition={{ repeat: 0, duration: 0.5, delay: 0.9 }}
-            >
-              <pre data-prefix=">" className="bg-warning text-warning-content">
-                <code>shockingly fast</code>
-              </pre>
-            </motion.div>
+
           </div>{' '}
           <div className="items-center justify-center space-x-5 space-y-5 md:flex">
             <div className="item "></div>
@@ -395,23 +468,23 @@ const Home = () => {
           </div>
           <div>
             Modern Tools
-            <div class="grid grid-cols-2 grid-rows-2 gap-2 overflow-hidden">
-              <div class="box row-span-2 bg-primary">
+            <div className="grid grid-cols-2 grid-rows-2 gap-2 overflow-hidden">
+              <div className="box row-span-2 bg-primary">
                 {' '}
-                <div className="item  bg-primary-content rounded-full items-center text-center content-center">
+                <div className="item  content-center items-center rounded-full bg-primary-content text-center">
                   <FaReact size={70} />
                   React
                 </div>
-                <div className="item bg-primary-content rounded-full">
+                <div className="item rounded-full bg-primary-content">
                   <SiNextdotjs size={70} />
                   Next.js
                 </div>
-                <div className="item bg-primary-content rounded-full">
+                <div className="item rounded-full bg-primary-content">
                   <SiNodedotjs size={70} />
                   Node.js
                 </div>
               </div>
-              <div class="box bg-secondary">
+              <div className="box bg-secondary">
                 {' '}
                 <div className="item h-32 w-32 bg-secondary-content">
                   {' '}
@@ -424,25 +497,21 @@ const Home = () => {
                   Framer Motion
                 </div>
               </div>
-              <div class="box bg-accent">
+              <div className="box bg-accent">
                 <div className="item h-32 w-32 bg-accent-content">
                   {' '}
                   <SiPostgresql size={70} />
                   PostgreSQL
+     
                 </div>
               </div>
             </div>
-           
           </div>
-          
- 
         </div>
       </div>
 
       <div className="section" id="contact-me">
-        <div className="  md:flex bg-base-100">
-         
-        </div>
+        <div className="  bg-base-100 md:flex"></div>
         <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
           <div>
             <svg
