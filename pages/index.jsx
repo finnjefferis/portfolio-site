@@ -283,12 +283,12 @@ const Home = () => {
                   </motion.h1>
                   
 
-                  <motion.h1 variants={title} initial="hidden" animate="visible"
+                  <motion.a variants={title} initial="hidden" animate="visible"
                     href="https://github.com/finnjefferis"
                     className="btn btn-accent m-5 w-48 md:w-56 lg:w-64 "
                   >
                     Github
-                  </motion.h1>
+                  </motion.a>
                 </div>
                 {/* <a className="btn btn-primary z-10 m-1" id="scroll-why-me">
                   Why Me?
