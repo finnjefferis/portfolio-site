@@ -47,21 +47,21 @@ const Home = () => {
   const { scrollYProgress } = useScroll()
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2])
 
-  useEffect(() => {
-    let scrollToWhyMe = document.querySelector('#scroll-why-me')
-    let whyMe = document.querySelector('#why-me')
+  // useEffect(() => {
+  //   // let scrollToWhyMe = document.querySelector('#scroll-why-me')
+  //   // let whyMe = document.querySelector('#why-me')
 
-    scrollToWhyMe.addEventListener('click', function () {
-      whyMe.scrollIntoView()
-    })
+  //   // scrollToWhyMe.addEventListener('click', function () {
+  //   //   whyMe.scrollIntoView()
+  //   })
 
-    let scrollToContactMe = document.querySelector('#scroll-contact-me')
-    let contactMe = document.querySelector('#contact-me')
+  //   // let scrollToContactMe = document.querySelector('#scroll-contact-me')
+  //   // let contactMe = document.querySelector('#contact-me')
 
-    scrollToContactMe.addEventListener('click', function () {
-      contactMe.scrollIntoView()
-    })
-  }, [])
+  //   // scrollToContactMe.addEventListener('click', function () {
+  //   //   contactMe.scrollIntoView()
+  //   })
+  // }, [])
   let randomNumber = Math.floor(Math.random() * themes.length)
   const [theme, setTheme] = useState('dracula')
   useEffect(() => {
@@ -262,7 +262,7 @@ const Home = () => {
                     Github
                   </a>
                 </div>
-                <a className="btn btn-primary z-10 m-1" id="scroll-why-me">
+                {/* <a className="btn btn-primary z-10 m-1" id="scroll-why-me">
                   Why Me?
                 </a>
                 <a
@@ -270,11 +270,11 @@ const Home = () => {
                   id="scroll-contact-me"
                 >
                   Get in Touch
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
-          <div className="mockup-code my-5 md:mx-96" id="why-me">
+          {/* <div className="mockup-code my-5 md:mx-96" id="why-me">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ y: [-5, 0], opacity: 1 }}
@@ -496,8 +496,9 @@ const Home = () => {
               </a>
             </div>
           </div>
-        </footer>
+        </footer> */}
       </div>
+    </div>
     </div>
   )
 }
