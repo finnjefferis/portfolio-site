@@ -23,78 +23,55 @@ import { useInView } from 'react-intersection-observer'
 
 const themes = [
   'dracula',
-  'light',
+
   'cupcake',
-  'dark',
-  'bumblebee',
+
+
   'emerald',
   'corporate',
   'synthwave',
   'cyberpunk',
-  'halloween',
+
   'forest',
   'aqua',
   'lofi',
   'fantasy',
-  'wireframe',
+
   'black',
   'autumn',
-  'lemonade',
+  
   'night',
   'coffee',
   'winter',
 ]
 
 const Home = () => {
-  //animation consts for scrolling text animation
-  const text = 'Finn Jefferis' // This would normally be passed into this component as a prop!
+  //animation consts for text animation
 
-  const ctrls = useAnimation()
+  const line1 = "Web developer with a focus on React and Node.js"
+  
 
-  const { ref, inView } = useInView({
-    threshold: 0.5,
+  const sentence = {
+    hidden: {opacity:1},
+    visible: {opacity:1, transition:{delay: 0.4, staggerChildren: 0.02},},
 
-    triggerOnce: true,
-  })
 
-  const wordAnimation = {
-    hidden: {},
-
-    visible: {},
   }
 
-  const characterAnimation = {
-    hidden: {
-      opacity: 0,
-
-      y: `0.25em`,
-    },
-
-    visible: {
-      opacity: 1,
-
-      y: `0em`,
-
-      transition: {
-        duration: 1,
-
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    },
+  const title = {
+    hidden: {opacity:0},
+    visible: {opacity:1, transition:{delay: 0.3, },},
   }
 
-  //svg path animation
-  const icon = {
-    hidden: {
-      pathLength: 0,
-      fill: "rgba(255, 255, 255, 0)"
-    },
-    visible: {
-      pathLength: 1,
-      fill: "rgba(255, 255, 255, 1)"
-    }
+  const name = {
+    hidden: {opacity:0},
+    visible: {opacity:1, transition:{delay: 0.2, },},
   }
 
+  const letter = {
+    hidden: {opacity:0, y:50},
+    visible: {opacity:1, y:0},
+  }
 
 
   // useEffect(() => {
@@ -113,7 +90,7 @@ const Home = () => {
   //   })
   // }, [])
   let randomNumber = Math.floor(Math.random() * themes.length)
-  const [theme, setTheme] = useState('dracula')
+  const [theme, setTheme] = useState('lofi')
   useEffect(() => {
     themeChange(false)
     // 👆 false parameter is required for react project
@@ -229,10 +206,10 @@ const Home = () => {
           <div className="wrapper z-10"></div>
           <div className=" ">
             <div className="hero  min-h-screen">
-              <div className="mask-parallelogram-4 inline-block min-h-full min-w-full gap-1 overflow-hidden">
+              <motion.div variants={title} initial="hidden" animate="visible" className="mask-parallelogram-4 inline-block min-h-full min-w-full gap-1 overflow-hidden">
                 <div className="  min-h-screen origin-top-right -rotate-45 transform bg-gradient-to-r from-primary via-accent to-secondary"></div>
-              </div>
-              <div className="dropdown absolute top-5 left-5 z-20">
+              </motion.div>
+              <motion.div variants={title} initial="hidden" animate="visible" className="dropdown absolute top-5 left-5 z-20">
                 <label tabIndex="0" className="btn m-1">
                   {theme}
                 </label>
@@ -240,21 +217,14 @@ const Home = () => {
                   tabIndex="0"
                   className="dropdown-content menu rounded-box   overflow-scroll bg-accent p-2 text-accent-content   shadow lg:h-auto"
                 >
-                  <li>
-                    <a onClick={lightTheme}>Light</a>
-                  </li>
-                  <li>
-                    <a onClick={darkTheme}>Dark</a>
-                  </li>
+                
                   <li>
                     <a onClick={draculaTheme}>Dracula</a>
                   </li>
                   <li>
                     <a onClick={businessTheme}>Business</a>
                   </li>
-                  <li>
-                    <a onClick={bumblebeeTheme}>Bumblebee</a>
-                  </li>
+                
                   <li>
                     <a onClick={corporateTheme}>Corporate</a>
                   </li>
@@ -264,9 +234,7 @@ const Home = () => {
                   <li>
                     <a onClick={cyberpunkTheme}>Cyberpunk</a>
                   </li>
-                  <li>
-                    <a onClick={halloweenTheme}>Halloween</a>
-                  </li>
+               
                   <li>
                     <a onClick={forestTheme}>Forest</a>
                   </li>{' '}
@@ -289,59 +257,38 @@ const Home = () => {
                     <a onClick={winterTheme}>Winter</a>
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
               <div className=" z-10 text-center">
                 <div>
-                  <h1 className="from-primary via-accent to-secondary font-bungee-shade   text-5xl font-bold text-base-content  sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-7xl md:text-transparent lg:text-7xl">
-                  <div className=";
-
-mr-5">
-            {text.split(' ').map((word, index) => {
-              return (
-                <motion.div 
-                  ref={ref}
-                  aria-hidden="true"
-                  key={index}
-                  initial="hidden"
-                  animate={ctrls}
-                  variants={wordAnimation}
-                  transition={{
-                    delayChildren: index * 0.25,
-
-                    staggerChildren: 0.05,
-                  }}
-                >
-                  {word.split('').map((character, index) => {
-                    return (
-                      <motion.div className="inline-block mr-1    "
-                        aria-hidden="true"
-                        key={index}
-                        variants={characterAnimation}
-                      >
-                        {character}
-                      </motion.div>
-                    )
-                  })}
-                </motion.div>
-              )
-            })}
-            </div>
-                  </h1>
+                  <motion.h1 variants={name} initial="hidden" animate="visible" className="from-primary via-accent to-secondary font-bungee-shade   text-5xl font-bold text-base-content  sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-7xl md:text-transparent lg:text-7xl">
+               Finn Jefferis
+                <br />
+               
+                  </motion.h1>
 
                   
 
-                  <p className="text-l from-primary via-accent to-secondary py-6 font-semibold text-base-content sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-2xl md:text-transparent">
-                    {' '}
-                    Web developer with a focus on React and Node.js.
-                  </p>
+                  <motion.h1 variants={sentence} initial="hidden" animate="visible"  className="text-l from-primary via-accent to-secondary py-6 font-semibold text-base-content sm:text-xl md:bg-gradient-to-r md:bg-clip-text md:text-2xl md:text-transparent">
+             
+                {line1.split("").map((char, index) => {
+                  return (
+                    <motion.span key={char + "-" + index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  )
+                })}
+                <br />
+               
+                  </motion.h1>
+                  
 
-                  <a
+                  <motion.h1 variants={title} initial="hidden" animate="visible"
                     href="https://github.com/finnjefferis"
                     className="btn btn-accent m-5 w-48 md:w-56 lg:w-64 "
                   >
                     Github
-                  </a>
+                  </motion.h1>
                 </div>
                 {/* <a className="btn btn-primary z-10 m-1" id="scroll-why-me">
                   Why Me?
