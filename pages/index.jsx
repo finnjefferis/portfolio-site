@@ -215,7 +215,7 @@ const Home = () => {
                
               </motion.div>
             
-              <motion.div variants={title} initial="hidden" animate="visible" className="dropdown absolute top-5 left-5 z-20">
+              <motion.div variants={title} initial="hidden" animate="visible" className=" dropdown absolute top-5 left-5 z-20">
                 <label tabIndex="0" className="btn m-1">
                   {theme}
                 </label>
@@ -267,7 +267,7 @@ const Home = () => {
 
               <div className=" z-10 text-center">
                 <div>
-                  <motion.h1 variants={name} initial="hidden" animate="visible" className=" p-2 text-left from-primary via-accent to-secondary font-bungee-shade   text-5xl font-bold   sm:text-xl bg-gradient-to-r bg-clip-text md:text-7xl text-transparent lg:text-7xl">
+                  <motion.h1 variants={name} initial="hidden" animate="visible" className=" p-2 text-left from-primary via-accent to-secondary font-bungee-shade   text-5xl font-extrabold   sm:text-xl bg-gradient-to-r bg-clip-text md:text-7xl text-transparent lg:text-7xl">
                Finn Jefferis
                 <br />
                
@@ -291,7 +291,7 @@ const Home = () => {
 
                   <motion.a variants={title} initial="hidden" animate="visible"
                     href="https://github.com/finnjefferis"
-                    className="btn btn-accent m-5 w-48 md:w-56 lg:w-64 ">
+                    className="btn btn-accent m-5 w-48 md:w-56 lg:w-64  ">
                   
                     Github
                   </motion.a>
