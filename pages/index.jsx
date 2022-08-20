@@ -291,7 +291,7 @@ const Home = () => {
 
                   <motion.a variants={title} initial="hidden" animate="visible"
                     href="https://github.com/finnjefferis"
-                    className="btn btn-accent my-5  ">
+                    className="btn btn-accent m-10  ">
                   
                     Github
                   </motion.a>
