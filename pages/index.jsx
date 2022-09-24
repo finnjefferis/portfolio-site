@@ -7,9 +7,15 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
+  SiCsharp,
+  SiReact
 } from 'react-icons/si'
+import { MdEmail} from 'react-icons/md'
+import { BsLinkedin} from 'react-icons/bs'
 
 import { FiFramer } from 'react-icons/fi'
+
+import { SliderPicker } from 'react-color'
 
 import {
   motion,
@@ -45,6 +51,7 @@ const themes = [
 const Home = () => {
   let randomNumber = Math.floor(Math.random() * themes.length)
   const [theme, setTheme] = useState('lofi')
+  const [background, setBackground] = useState({background: '#ffff'})
   const whyMeRef = useRef(null)
   //animation consts for text animation
 
@@ -62,7 +69,7 @@ const Home = () => {
 
   const name = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { delay: 0.2 } },
+    visible: { opacity: 1, transition: { delay: 0.1 } },
   }
 
   const letter = {
@@ -313,82 +320,168 @@ const Home = () => {
   }
 
   function Timeline() {
-
-    return <section>
-    <div class=" py-8">
-    <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-      <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
-        <p class="ml-2 text-accent uppercase tracking-loose">My experience</p>
-        <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Why Me?</p>
-        <p class="text-sm md:text-base  mb-4">
-         Over a year of professional web dev experience.
-        </p>
-        <a href="#"
-        class="btn btn-outline">
-        Explore Now</a>
-      </div>
-      <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
-        <div class="container mx-auto w-full h-full">
-          <div class="relative wrap overflow-hidden p-10 h-full">
-          {/* <div class="border-2-2 border-yellow-555 absolute h-full border"
-              style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
-            <div class="border-2-2 border-yellow-555 absolute h-full border"
-              style={{left: 50%; border: 2px solid #FFC100; border-radius: 1%;></div> */}
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1 w-5/12 px-1 py-4 text-right">
-                <p class="mb-3 text-base text-accent">Started May 2022</p>
-                <h4 class="mb-3 font-bold text-lg md:text-2xl">Junior Software Developer at Admor DentalPlus Software Ltd.</h4>
-                <p class="text-sm md:text-base leading-snug  text-opacity-100">
-                  Pick your favourite event(s) and register in that event by filling the form corresponding to that
-                  event. Its that easy 
-                </p>
-              </div>
+    return (
+      <section>
+        <div class=" py-8">
+          <div class="container mx-auto my-12 flex flex-col items-start md:my-24 md:flex-row">
+            <div class="sticky mt-2 flex w-full flex-col px-8 md:top-36 md:mt-12 lg:w-1/3">
+              <p class="tracking-loose ml-2 uppercase text-accent">
+                My experience
+              </p>
+              <p class="mb-2 text-3xl leading-normal md:text-4xl md:leading-relaxed">
+                Why Me?
+              </p>
+              <p class="mb-4 text-sm  md:text-base">
+                Over a year of professional web dev experience.
+              </p>
+              <a href="#" class="btn btn-outline">
+               Download CV
+              </a>
             </div>
-            <div class="mb-8 flex justify-between items-center w-full right-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1  w-5/12 px-1 py-4 text-left">
-                <p class="mb-3 text-base text-accent">Started August 2021</p>
-                <h4 class="mb-3 font-bold text-lg md:text-2xl">Software Developer Apprentice at The Shore Group</h4>
-                <p class="text-sm md:text-base leading-snug text-opacity-100">
-                  Participate online. The links for your registered events will be sent to you via email and whatsapp
-                  groups. Use those links and show your talent.
-                </p>
-              </div>
-            </div>
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1 w-5/12 px-1 py-4 text-right">
-                <p class="mb-3 text-base text-accent"> 10 May, 2021</p>
-                <h4 class="mb-3 font-bold text-lg md:text-2xl">Result Declaration</h4>
-                <p class="text-sm md:text-base leading-snug text-opacity-100">
-                  The ultimate genius will be revealed by our judging panel on 10th May, 2021 and the resukts will be
-                  announced on the whatsapp groups and will be mailed to you.
-                </p>
-              </div>
-            </div>
+            <div class="sticky ml-0 md:ml-12 lg:w-2/3">
+              <div class="container mx-auto h-full w-full ">
+                <div class="wrap relative h-full overflow-hidden p-10  ">
+                <div
+                    class="border-2-2 border-yellow-555 absolute h-full border absolute inset-y-0 md:right-96"
+                    // style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"
+                  ></div>
+              
+                  <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                 
+                    <div class="order-1 w-5/12"></div>
+                    
+                    <div class="order-1 w-5/12 px-1 py-4 text-right">
+                      <p class="mb-3 text-base text-accent">Started May 2022</p>
+                      <h4 class="mb-3 text-lg font-bold md:text-2xl">
+                        Junior Software Developer at Admor DentalPlus Software
+                        Ltd.
+                      </h4>
+                      <p class="text-sm leading-snug text-opacity-100  md:text-base my-1">
+                       - Worked closely with a team to design and develop a world-class dental application using Next.JS, PostgreSQL, and SyncFusion component library.
+                      </p>
+                      <p class="text-sm leading-snug text-opacity-100  md:text-base my-1 ">
+                      
+                       - Developed a native C# app to allow deeper native integration via a web extension.
+                      </p>
+                      <motion.a
+                  variants={title}
+                  initial="hidden"
+                  animate="visible"
+                  className="font-semibold"
+                
+                >
+                  Skills acquired: 
+                <SiNextdotjs/> <SiPostgresql/>
+                </motion.a>
+                    </div>
+                  </div>
+                  <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="order-1  w-5/12 px-1 py-4 text-left">
+                      <p class="mb-3 text-base text-accent">
+                        Started August 2021
+                      </p>
+                      <h4 class="mb-3 text-lg font-bold md:text-2xl">
+                        Software Developer Apprentice at The Shore Group
+                      </h4>
+                      <p class="text-sm leading-snug text-opacity-100 md:text-base my-1">
+                       - Introduced to React and modern Javascript web development. 
+            
+                      </p>
+                      <p class="text-sm leading-snug text-opacity-100  md:text-base my-1 ">
+                      - Worked on a bespoke digital signage solution to be used internally made using Next.JS, TailwindCSS and Electron.
+                     </p>
+                     <p class="text-sm leading-snug text-opacity-100  md:text-base my-1 ">
+                      - Achieved certificates in software development methodolgies and software development.
+                     </p>
+                     <motion.a
+                  variants={title}
+                  initial="hidden"
+                  animate="visible"
+                  className="font-semibold"
+                
+                >
+                  Skills acquired: 
+                <SiJavascript/> <SiReact/> <SiNodedotjs/> <SiTailwindcss/>
+                </motion.a>
+                    </div>
+                  </div>
+               
 
-            <div class="mb-8 flex justify-between items-center w-full right-timeline">
-              <div class="order-1 w-5/12"></div>
-
-              <div class="order-1  w-5/12 px-1 py-4">
-                <p class="mb-3 text-base text-accent"> Started September 2018</p>
-                <h4 class="mb-3 font-bold  text-lg md:text-2xl text-left">Worthing College</h4>
-                <p class="text-sm md:text-base leading-snug  text-opacity-100">
-                  The winners will be contacted by our team for their addresses and the winning goodies will be sent at
-                  their addresses.
-                </p>
+                  <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="order-1 w-5/12 px-1 py-4 text-right">
+                      <p class="mb-3 text-base text-accent">
+                        {' '}
+                        Started September 2018
+                      </p>
+                      <h4 class="mb-3 text-right  text-lg font-bold md:text-2xl">
+                        Worthing College
+                      </h4>
+                      <p class="text-sm leading-snug text-opacity-100  md:text-base my-1">
+                     - Studied Computer Science, Electronics, and Engineering
+                      </p>
+                      <p class="text-sm leading-snug text-opacity-100  md:text-base my-1">
+                     - Introduced to C# and native app development using WinForms. 
+                      </p>
+                      <motion.a
+                  variants={title}
+                  initial="hidden"
+                  animate="visible"
+                  className="font-semibold"
+                
+                >
+                  Skills acquired: 
+                <SiCsharp/>
+                </motion.a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-     
+        </div>
+      </section>
+    )
+  }
+
+  function handleChangeComplete(){
+    handleChangeComplete = (color) => {
+      setBackground({ background: color.hex });
+    };
+  }
+
+  function ThemeGenerator() {
+    return (
+      <div>
+        <div className="md:font-5xl text-center font-semibold">
+          Endlessly Extensible.
+        </div>
+
+        <div className="grid grid-cols-3 grid-rows-1 gap-2 overflow-hidden">
+        <div className="card text-center ">
+            <div className="">
+
+          Primary
+          </div>
+            <SliderPicker className="card-body" color={background} onChangeComplete={handleChangeComplete} />
+          </div>
+          <div className="card text-center ">
+            <div className="">
+Secondary
+</div>
+<SliderPicker className="card-body" color={background} onChangeComplete={handleChangeComplete} />
+          </div>
+
+          <div className="card text-center ">
+            <div className="">
+              Accent
+            </div>
+            <SliderPicker className="card-body" color={background} onChangeComplete={handleChangeComplete} />
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  </section>
-
-
+    )
   }
 
   return (
@@ -468,6 +561,30 @@ const Home = () => {
                   <li>
                     <a onClick={winterTheme}>Winter</a>
                   </li>
+                  <li>
+                    <a onClick={cmykTheme} />
+                  </li>
+                  <li>
+                    <a onClick={lemonadeTheme} />
+                  </li>
+                  <li>
+                    <a onClick={wireframeTheme} />
+                  </li>
+                  <li>
+                    <a onClick={pastelTheme} />
+                  </li>
+                  <li>
+                    <a onClick={retroTheme} />
+                  </li>
+                  <li>
+                    <a onClick={bumblebeeTheme} />
+                  </li>
+                  <li>
+                    <a onClick={emeraldTheme} />
+                  </li>
+                  <li>
+                    <a onClick={darkTheme} />
+                  </li>
                 </ul>
               </motion.div>
 
@@ -477,7 +594,7 @@ const Home = () => {
                     variants={name}
                     initial="hidden"
                     animate="visible"
-                    className="m-1 my-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text   text-left font-bungee-shade   text-5xl font-extrabold text-transparent sm:text-xl md:text-7xl lg:text-7xl"
+                    className="m-1 my-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text   text-left font-bungee-shade   text-5xl font-extrabold text-transparent sm:text-xl md:text-7xl lg:text-7xl xl:text-7xl"
                   >
                     Finn Jefferis
                     <br />
@@ -504,10 +621,12 @@ const Home = () => {
                     initial="hidden"
                     animate="visible"
                     href="https://github.com/finnjefferis"
-                    className="btn btn-accent my-5  "
+                    className="btn btn-primnary my-5  "
                   >
                     Github
                   </motion.a>
+             
+
                 </div>
 
                 <motion.a
@@ -532,21 +651,14 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div ref={whyMeRef}>
-             <WhyMe />
-            <div>Why me?</div>
-            <div>
-              Over a year of commercial web development experience - worked on
-              Digital Signage, DentalPlus V4, this portfolio website.
-            </div>
-            <div>
-              featured project: this websites source code?? anything else??
-            </div>
-           <Timeline/>
-           
+          <div id="why-me">
+            {/* <WhyMe /> */}
+            {/* <ThemeGenerator /> */}
+
+            <Timeline />
           </div>
 
-          <div>
+          {/* <div>
             Modern Tools
             <div className="grid grid-cols-2 grid-rows-2 gap-2 overflow-hidden">
               <div className="box row-span-2 bg-primary">
@@ -572,8 +684,8 @@ const Home = () => {
                   Tailwind
                 </div>
                 <div className="item h-32 w-32 bg-secondary-content">
-                  {' '}
-                  <FiFramer size={70} />
+                  {' '} */}
+          {/* <FiFramer size={70} />
                   Framer Motion
                 </div>
               </div>
@@ -585,8 +697,18 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div> */}
+          <div classname="hero min-h-screen">
+            <motion.h1
+              variants={name}
+              initial="hidden"
+              whileInView="visible"
+              className="m-1 my-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text   text-center font-bungee-shade    text-5xl font-extrabold text-transparent sm:text-xl md:text-7xl lg:text-7xl"
+            >
+              Get in touch
+              <br />
+            </motion.h1>
           </div>
-          <div className="">get in touch</div>
         </div>
       </div>
 
@@ -608,39 +730,26 @@ const Home = () => {
           </div>
           <div>
             <div className="grid grid-flow-col gap-4">
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current"
-                >
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                </svg>
-              </a>
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current"
-                >
-                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                </svg>
-              </a>
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current"
-                >
-                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                </svg>
-              </a>
+            <a href="https://www.linkedin.com/in/finlay-jefferis-80a417234/" className="">
+    <span>
+    <BsLinkedin size={30} />
+    </span>
+</a>
+<a href="https://github.com/finnjefferis" className="">
+    <span>
+ 
+    <AiFillGithub size={30}/>
+    </span>
+</a>
+
+<a href="https://www.linkedin.com/in/finlay-jefferis-80a417234/" className="">
+    <span>
+    <MdEmail size={30} />
+    </span>
+</a>
+
+    
+          
             </div>
           </div>
         </footer>

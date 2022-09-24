@@ -1,5 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
+//colour picker on front end
+//pass in values to theme
+
 module.exports = {
   
   content: [
