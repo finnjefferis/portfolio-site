@@ -10,7 +10,7 @@ import {
   SiCsharp,
   SiReact
 } from 'react-icons/si'
-import { MdEmail} from 'react-icons/md'
+import { MdEmail, MdOutlineEmail} from 'react-icons/md'
 import { BsLinkedin} from 'react-icons/bs'
 
 import { FiFramer } from 'react-icons/fi'
@@ -208,6 +208,72 @@ const Home = () => {
     setTheme('business')
   }
 
+  function Modal(){
+    return (
+      <div>
+    <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+<label htmlFor="my-modal-4" className="modal cursor-pointer">
+  <label className="modal-box relative" for="">
+    <h1 className="text-xl font-bold">Finn Jefferis</h1>
+    <h3 className=" font-semibold">
+
+Professional Summary
+Software developer with solid foundational knowledge, experience in modern web development and a commitment to always keep learning.
+</h3>
+    <p className="py-4">Skills
+Experience in full-stack web app development using frameworks such as React and Next.js.
+Designed websites using JavaScript, HTML, and CSS.
+Comfortable writing clean and efficient SQL.
+Experience with Electron and writing browser extensions.
+Familiar with other programming languages such as Python, C# and PHP.
+Fast and intentional learner. 
+Focused & Patient.
+Dedicated team player.
+Thrives in fast-paced environment.
+Quick problem solver.
+High energy.
+Committed team player.
+Organised multi-tasker.
+Passionate about software development and always eager to learn something new.
+
+
+
+</p>
+<p>
+Junior Software Developer at Admor DentalPlus 9-5-2022 - Present
+Assisted in the design and full-stack development of a modern web app for dental practices
+Used Next.js and component libraries Syncfusion and Bootstrap for the front-end.
+Wrote SQL statements using PostgreSQL & PGadmin 4 to handle database interaction.
+Translated legacy PHP scripts into modern Javascript.
+Paid careful attention to performance & React best practices to ensure an optimised and secure experience.
+Wrote a browser extension for deeper system-level integration.
+
+</p>
+<p>Software Developer Apprentice at The Shore Group 18-8-2021 – 5-5-2022
+Took personal ownership of a struggling project and worked around the clock to ensure it shipped on time and to a high standard.
+Developed a bespoke digital signage solution using React and TailwindCSS for the front-end and cutting-edge headless content management systems like Strapi and Keystone to power the back-end.
+Learned on the job continuously throughout the experience.
+Self-motivated and highly organised
+Familiar with modern development tools such as Git and Node.js
+Cleaned up and maintained our RDBMS to ensure compatibility with custom software
+Assisted colleagues with a plethora of general IT issues
+</p>
+
+<p>Education</p>
+<p>Education
+BCS Level 3 Certificate in Programming: Pass
+BCS Level 3 Certificate in Software Development Context and Methodologies : Pass
+A Levels - 2018 - 2021
+Computer Science : D
+Electronics : D
+Engineering CAMTEC : Pass
+</p>
+  </label>
+</label>
+</div>
+    )
+  }
+
   //take yposition and use it to scale code block?
 
   function WhyMe() {
@@ -322,6 +388,7 @@ const Home = () => {
   function Timeline() {
     return (
       <section>
+        <Modal/>
         <div class=" py-8">
           <div class="container mx-auto my-12 flex flex-col items-start md:my-24 md:flex-row">
             <div class="sticky mt-2 flex w-full flex-col px-8 md:top-36 md:mt-12 lg:w-1/3">
@@ -334,9 +401,7 @@ const Home = () => {
               <p class="mb-4 text-sm  md:text-base">
                 Over a year of professional web dev experience.
               </p>
-              <a href="#" class="btn btn-outline">
-               Download CV
-              </a>
+              <label htmlFor="my-modal-4" className="btn modal-button btn-outline">View CV</label>
             </div>
             <div class="sticky ml-0 md:ml-12 lg:w-2/3">
               <div class="container mx-auto h-full w-full ">
@@ -350,7 +415,7 @@ const Home = () => {
                  
                     <div class="order-1 w-5/12"></div>
                     
-                    <div class="order-1 w-5/12 px-1 py-4 text-right">
+                    <div class="order-1 md:w-5/12 px-1 py-4 text-right">
                       <p class="mb-3 text-base text-accent">Started May 2022</p>
                       <h4 class="mb-3 text-lg font-bold md:text-2xl">
                         Junior Software Developer at Admor DentalPlus Software
@@ -376,8 +441,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div class="right-timeline mb-8 flex w-full items-center justify-between">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="order-1  w-5/12 px-1 py-4 text-left">
+                    <div class="order-1 md:w-5/12"></div>
+                    <div class="order-1  md:w-5/12 px-1 py-4 text-left">
                       <p class="mb-3 text-base text-accent">
                         Started August 2021
                       </p>
@@ -409,8 +474,8 @@ const Home = () => {
                
 
                   <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="order-1 w-5/12 px-1 py-4 text-right">
+                    <div class="order-1 md:w-5/12"></div>
+                    <div class="order-1 md:w-5/12 px-1 py-4 text-right">
                       <p class="mb-3 text-base text-accent">
                         {' '}
                         Started September 2018
@@ -453,7 +518,11 @@ const Home = () => {
 
   function ThemeGenerator() {
     return (
+
       <div>
+              <input type="checkbox" id="theme-modal" className="modal-toggle" />
+<label htmlFor="theme-modal" className="modal cursor-pointer">
+  <label className="modal-box relative" for="">
         <div className="md:font-5xl text-center font-semibold">
           Endlessly Extensible.
         </div>
@@ -480,6 +549,10 @@ Secondary
             <SliderPicker className="card-body" color={background} onChangeComplete={handleChangeComplete} />
           </div>
         </div>
+        <div className="btn btn-primary">Apply</div>
+    
+      </label>
+      </label>
       </div>
     )
   }
@@ -490,6 +563,8 @@ Secondary
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      <ThemeGenerator/>
       <div className="section ">
         <div className="text-center text-primary  ">
           <div className="wrapper z-10"></div>
@@ -561,30 +636,8 @@ Secondary
                   <li>
                     <a onClick={winterTheme}>Winter</a>
                   </li>
-                  <li>
-                    <a onClick={cmykTheme} />
-                  </li>
-                  <li>
-                    <a onClick={lemonadeTheme} />
-                  </li>
-                  <li>
-                    <a onClick={wireframeTheme} />
-                  </li>
-                  <li>
-                    <a onClick={pastelTheme} />
-                  </li>
-                  <li>
-                    <a onClick={retroTheme} />
-                  </li>
-                  <li>
-                    <a onClick={bumblebeeTheme} />
-                  </li>
-                  <li>
-                    <a onClick={emeraldTheme} />
-                  </li>
-                  <li>
-                    <a onClick={darkTheme} />
-                  </li>
+                 
+                  <label htmlFor="theme-modal" className="btn modal-button">???</label>
                 </ul>
               </motion.div>
 
@@ -708,6 +761,12 @@ Secondary
               Get in touch
               <br />
             </motion.h1>
+            <div className="flex flex-col w-full lg:flex-row">
+  <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div> 
+  <div className="divider lg:divider-horizontal">OR</div> 
+  <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center"><div>
+    <MdOutlineEmail size={80}/></div></div>
+</div>
           </div>
         </div>
       </div>
