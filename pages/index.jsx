@@ -129,6 +129,10 @@ const Home = () => {
     setTheme('corporate')
   }
 
+  function myTheme(){
+    setTheme('mytheme')
+  }
+
   function synthwaveTheme() {
     setTheme('synthwave')
   }
@@ -512,8 +516,30 @@ Engineering CAMTEC : Pass
 
   function handleChangeComplete(){
     handleChangeComplete = (color) => {
+      console.log("colour", color)
       setBackground({ background: color.hex });
     };
+  }
+
+  function applyTheme(){
+    let primaryColour = "#fffff"
+    let secondaryColour = '#fffff'
+    let accentColor = '#fffff'
+
+    let data = {primary: primaryColour, secondary: secondaryColour, accent: accentColor}
+
+    //api call to post selected colours through
+
+    fetch('http://localhost:3000/api/theme', {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
   }
 
   function ThemeGenerator() {
@@ -549,7 +575,7 @@ Secondary
             <SliderPicker className="card-body" color={background} onChangeComplete={handleChangeComplete} />
           </div>
         </div>
-        <div className="btn btn-primary">Apply</div>
+        <div className="btn btn-primary" onClick={applyTheme}>Apply</div>
     
       </label>
       </label>
@@ -611,6 +637,9 @@ Secondary
                   </li>
                   <li>
                     <a onClick={synthwaveTheme}>Synthwave</a>
+                  </li>
+                  <li>
+                    <a onClick={myTheme}/>
                   </li>
                   <li>
                     <a onClick={cyberpunkTheme}>Cyberpunk</a>
