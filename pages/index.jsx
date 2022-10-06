@@ -215,7 +215,7 @@ const Home = () => {
       <div>
     <input type="checkbox" id="my-modal-4" className="modal-toggle" />
 <label htmlFor="my-modal-4" className="modal cursor-pointer">
-  <label className="modal-box relative" for="">
+  <label className="modal-box relative" htmlFor="">
     <h1 className="text-xl font-bold">Finn Jefferis</h1>
     <h3 className=" font-semibold">
 
@@ -226,19 +226,32 @@ Professional Summary
     <p className="py-4 text-left">Skills 
     <p>
 Experience in full-stack web app development using frameworks such as React and Next.js.
-</p><p>
-Designed websites using JavaScript, HTML, and CSS.</p><p>
-Comfortable writing clean and efficient SQL.</p><p>
-Experience with Electron and writing browser extensions.</p><p>
-Familiar with other programming languages such as Python, C# and PHP.</p><p>
-Fast and intentional learner. </p><p>
-Focused & Patient.</p><p>
-Dedicated team player.</p><p>
-Thrives in fast-paced environment.</p><p>
-Quick problem solver.</p><p>
-High energy.</p><p>
-Committed team player.</p><p>
-Organised multi-tasker.</p><p>
+</p>
+<p>
+Designed websites using JavaScript, HTML, and CSS.</p>
+<p>
+Comfortable writing clean and efficient SQL.</p>
+<p>
+Experience with Electron and writing browser extensions.</p>
+<p>
+Familiar with other programming languages such as Python, C# and PHP.</p>
+<p>
+Fast and intentional learner. </p>
+<p>
+Focused & Patient.</p>
+<p>
+Dedicated team player.</p>
+<p>
+Thrives in fast-paced environment.</p>
+<p>
+Quick problem solver.</p>
+<p>
+High energy.</p>
+<p>
+Committed team player.</p>
+<p>
+Organised multi-tasker.</p>
+<p>
 Passionate about software development and always eager to learn something new.</p>
 
 
@@ -246,13 +259,19 @@ Passionate about software development and always eager to learn something new.</
 </p>
 <p className=" font-semibold text-xl">
 Junior Software Developer at Admor DentalPlus 9-5-2022 - Present</p><p className="text-left"><p>
-Assisted in the design and full-stack development of a modern web app for dental practices</p><p>
-Used Next.js and component libraries Syncfusion and Bootstrap for the front-end.</p><p>
-Wrote SQL statements using PostgreSQL & PGadmin 4 to handle database interaction.</p><p>
-Translated legacy PHP scripts into modern Javascript.</p><p>
-Paid careful attention to performance & React best practices to ensure an optimised and secure experience.</p><p>
-Wrote a browser extension for deeper system-level integration.</p><p>
-</p>
+Assisted in the design and full-stack development of a modern web app for dental practices</p>
+<p>
+Used Next.js and component libraries Syncfusion and Bootstrap for the front-end.</p>
+<p>
+Wrote SQL statements using PostgreSQL & PGadmin 4 to handle database interaction.</p>
+<p>
+Translated legacy PHP scripts into modern Javascript.</p>
+<p>
+Paid careful attention to performance & React best practices to ensure an optimised and secure experience.</p>
+<p>
+Wrote a browser extension for deeper system-level integration.</p>
+
+
 </p>
 
 <p className=" font-semibold text-xl">Software Developer Apprentice at The Shore Group 18-8-2021 – 5-5-2022</p><p className="text-left"><p>
@@ -395,44 +414,44 @@ Engineering CAMTEC</p><p className="text-left">
   function Timeline() {
     return (
       <section>
-        <Modal/>
-        <div class=" py-8">
-          <div class="container mx-auto my-12 flex flex-col items-start sm:my-24 lg:flex-row">
-            <div class="lg:sticky mt-2 flex w-full flex-col px-8 sm:top-36 sm:mt-12 lg:w-1/3">
-              <p class="tracking-loose ml-2 uppercase text-accent">
+       
+        <div className=" py-8">
+          <div className="container mx-auto my-12 flex flex-col items-start sm:my-24 lg:flex-row">
+            <div className="lg:sticky mt-2 flex w-full flex-col px-8 sm:top-36 sm:mt-12 lg:w-1/3">
+              <p className="tracking-loose ml-2 uppercase text-accent">
                 My experience
               </p>
-              <p class="mb-2 text-3xl leading-normal md:text-4xl md:leading-relaxed">
+              <p className="mb-2 text-3xl leading-normal md:text-4xl md:leading-relaxed">
                 Why Me?
               </p>
-              <p class="mb-4 text-sm  md:text-base">
+              <p className="mb-4 text-sm  md:text-base">
                 Over a year of professional web dev experience.
               </p>
               <label htmlFor="my-modal-4" className="btn modal-button btn-outline">View CV</label>
             </div>
-            <div class="sticky ml-0 sm:ml-12 md:w-2/3">
-              <div class="container mx-auto h-full w-full ">
-                <div class="wrap relative h-full overflow-hidden p-10  ">
+            <div className="sticky ml-0 sm:ml-12 md:w-2/3">
+              <div className="container mx-auto h-full w-full ">
+                <div className="wrap relative h-full overflow-hidden p-10  ">
                 <div
-                    class="border-2-2 border-yellow-555 absolute h-full border absolute inset-y-0 "
+                    className="border-2-2 border-yellow-555 absolute h-full border absolute inset-y-0 "
                     // style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"
                   ></div>
                   
               
-                  <div class="right-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                  <div className="right-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
                  
-                    <div class="order-1 w-5/12"></div>
+                    <div className="order-1 w-5/12"></div>
                     
-                    <div class="order-1 md:w-5/12 px-1 py-4 xs:text-left lg:text-right">
-                      <p class="mb-3 text-base text-secondary">Started May 2022</p>
-                      <h4 class="mb-3  font-bold md:text-2xl">
+                    <div className="order-1 md:w-5/12 px-1 py-4 xs:text-left lg:text-right">
+                      <p className="mb-3 text-base text-secondary">Started May 2022</p>
+                      <h4 className="mb-3  font-bold md:text-2xl">
                         Junior Software Developer at Admor DentalPlus Software
                         Ltd.
                       </h4>
-                      <p class=" leading-snug text-opacity-100  md:text-base my-1">
-                       - Worked closely with a team to design and develop a world-class dental application using Next.JS, PostgreSQL, and SyncFusion component library.
+                      <p className=" leading-snug text-opacity-100  md:text-base my-1">
+                       - Worked closely with a team to design and develop a world-className dental application using Next.JS, PostgreSQL, and SyncFusion component library.
                       </p>
-                      <p class=" leading-snug text-opacity-100  md:text-base my-1 ">
+                      <p className=" leading-snug text-opacity-100  md:text-base my-1 ">
                       
                        - Developed a native C# app to allow deeper native integration via a web extension.
                       </p>
@@ -450,26 +469,26 @@ Engineering CAMTEC</p><p className="text-left">
                
                     </div>
                   </div>
-                  <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                  <div className="right-timeline mb-8 flex w-full items-center justify-between">
                     
-                    <div class="order-1 md:w-5/12"></div>
+                    <div className="order-1 md:w-5/12"></div>
                     
-                    <div class="order-1  md:w-5/12 px-1 py-4 text-left">
+                    <div className="order-1  md:w-5/12 px-1 py-4 text-left">
                
-                      <p class="mb-3 text-base text-secondary">
+                      <p className="mb-3 text-base text-secondary">
                         Started August 2021
                       </p>
-                      <h4 class="mb-3 font-bold md:text-2xl">
+                      <h4 className="mb-3 font-bold md:text-2xl">
                         Software Developer Apprentice at The Shore Group
                       </h4>
-                      <p class=" leading-snug text-opacity-100 md:text-base my-1">
+                      <p className=" leading-snug text-opacity-100 md:text-base my-1">
                        - Introduced to React and modern Javascript web development. 
             
                       </p>
-                      <p class=" leading-snug text-opacity-100  md:text-base my-1 ">
+                      <p className=" leading-snug text-opacity-100  md:text-base my-1 ">
                       - Worked on a bespoke digital signage solution to be used internally made using Next.JS, TailwindCSS and Electron.
                      </p>
-                     <p class=" leading-snug text-opacity-100  md:text-base my-1 ">
+                     <p className=" leading-snug text-opacity-100  md:text-base my-1 ">
                       - Achieved certificates in software development methodolgies and software development.
                      </p>
                      <motion.a
@@ -558,7 +577,7 @@ Engineering CAMTEC</p><p className="text-left">
       <div>
               <input type="checkbox" id="theme-modal" className="modal-toggle" />
 <label htmlFor="theme-modal" className="modal cursor-pointer">
-  <label className="modal-box relative" for="">
+  <label className="modal-box relative" htmlFor="">
         <div className="md:font-5xl text-center font-semibold">
           Endlessly Extensible.
         </div>
@@ -680,7 +699,7 @@ Secondary
                 </ul>
               </motion.div>
 
-              <div className="absolute xs:bottom-20  md:bottom-24 lg:top-64 z-10 text-center">
+              <div className="absolute xs:bottom-20  md:bottom-24 lg:top-80 z-10 text-center">
                 <div className="">
                   <motion.h1
                     variants={name}
