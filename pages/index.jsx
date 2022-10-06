@@ -1,6 +1,6 @@
 import { AiFillHtml5, AiFillGithub } from 'react-icons/ai'
 
-import { FaCss3Alt } from 'react-icons/fa'
+import { FaCss3Alt, FaPython, FaPhp } from 'react-icons/fa'
 import {
   SiJavascript,
   SiTailwindcss,
@@ -8,7 +8,8 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiCsharp,
-  SiReact
+  SiReact,
+  SiMysql
 } from 'react-icons/si'
 import { MdEmail, MdOutlineEmail} from 'react-icons/md'
 import { BsLinkedin} from 'react-icons/bs'
@@ -434,8 +435,38 @@ Engineering CAMTEC</p><p className="text-left">
                 <div className="wrap relative h-full overflow-hidden p-10  ">
                 <div
                     className="border-2-2 border-yellow-555 absolute h-full border absolute inset-y-0 "
-                    // style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"
                   ></div>
+
+<div className="right-timeline mb-8 flex w-full flex-row items-center justify-between">
+                 
+                 <div className="order-1 w-5/12"></div>
+                 
+                 <div className="order-1 md:w-5/12 px-1 py-4 text-left">
+                   <p className="mb-3 text-base text-secondary">Started October 2022</p>
+                   <h4 className="mb-3  font-bold md:text-2xl">
+                  Software Engineer at CloudPerfect
+                   </h4>
+                   <p className=" leading-snug text-opacity-100  md:text-base my-1">
+                -Fill in here
+                   </p>
+                   <p className=" leading-snug text-opacity-100  md:text-base my-1 ">
+                   
+          
+                   </p>
+                   <motion.a
+               variants={name}
+               initial="hidden"
+               whileInView="visible"
+               className="font-semibold flex  text-accent text-2xl"
+             
+             >
+               Skills acquired: 
+             <FaPython/><FaPhp/>
+             </motion.a>
+
+            
+                 </div>
+               </div>
                   
               
                   <div className="right-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
@@ -449,7 +480,7 @@ Engineering CAMTEC</p><p className="text-left">
                         Ltd.
                       </h4>
                       <p className=" leading-snug text-opacity-100  md:text-base my-1">
-                       - Worked closely with a team to design and develop a world-className dental application using Next.JS, PostgreSQL, and SyncFusion component library.
+                       - Worked closely with a team to design and develop a world-class dental application using Next.JS, PostgreSQL, and SyncFusion component library.
                       </p>
                       <p className=" leading-snug text-opacity-100  md:text-base my-1 ">
                       
@@ -531,6 +562,7 @@ Engineering CAMTEC</p><p className="text-left">
                   Skills acquired: 
                 <SiCsharp/>
                 <AiFillGithub/>
+                <SiMysql/>
                 </motion.a>
                     </div>
                   </div>
@@ -715,7 +747,7 @@ Secondary
                     variants={sentence}
                     initial="hidden"
                     animate="visible"
-                    className="text-l bg-gradient-to-r from-primary via-accent to-secondary  bg-clip-text font-semibold text-transparent sm:text-xl md:text-2xl"
+                    className="text-l bg-gradient-to-r from-primary via-accent to-secondary  bg-clip-text font-semibold text-transparent sm:text-xl md:text-2xl my-5"
                   >
                     {line1.split('').map((char, index) => {
                       return (
@@ -732,7 +764,7 @@ Secondary
                     initial="hidden"
                     animate="visible"
                     href="https://github.com/finnjefferis"
-                    className="btn btn-primnary my-5  "
+                    className="btn btn-primary  m-1 "
                   >
                     Github
                   </motion.a>
@@ -744,7 +776,7 @@ Secondary
                   variants={title}
                   initial="hidden"
                   animate="visible"
-                  className="btn btn-primary z-10 m-1"
+                  className="btn btn-secondary z-10 m-1"
                   id="scroll-why-me"
                 >
                   Why Me?
@@ -753,7 +785,7 @@ Secondary
                
                 <motion.label variants={title}
                   initial="hidden"
-                  animate="visible" htmlFor="my-modal-4" className="btn modal-button btn-secondary">View CV</motion.label>
+                  animate="visible" htmlFor="my-modal-4" className="btn modal-button btn-accent m-1">View CV</motion.label>
               </div>
             </div>
           </div>
