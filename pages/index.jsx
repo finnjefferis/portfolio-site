@@ -459,7 +459,7 @@ const Home = () => {
                   <div className="right-timeline mb-8 flex w-full flex-row items-center justify-between">
                     <div className="order-1 w-5/12"></div>
 
-                    <div className="order-1 px-1 py-4 text-left md:w-5/12">
+                    {/* <div className="order-1 px-1 py-4 text-left md:w-5/12">
                       <div className="mb-3 text-base text-secondary">
                         Started October 2022
                       </div>
@@ -480,7 +480,7 @@ const Home = () => {
                         <FaPython />
                         <FaPhp />
                       </motion.a>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="right-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
