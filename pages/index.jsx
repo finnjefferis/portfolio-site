@@ -509,9 +509,10 @@ const Home = () => {
                         whileInView="visible"
                         className="flex text-2xl  font-semibold text-accent"
                       >
+                     
                         Skills acquired:
-                        <SiNextdotjs /> <SiPostgresql />
-                        <FaCss3Alt />
+                        <SiNextdotjs className="m-1"/> <SiPostgresql className="m-1"/>
+                        <FaCss3Alt className="m-1"/>
                       </motion.a>
                     </div>
                   </div>
@@ -545,7 +546,7 @@ const Home = () => {
                         className="flex text-2xl font-semibold text-accent"
                       >
                         Skills acquired:
-                        <SiJavascript /> <SiReact /> <SiTailwindcss />
+                        <SiJavascript className="m-1"/> <SiReact className="m-1"/> <SiTailwindcss className="m-1"/>
                       </motion.a>
                     </div>
                   </div>
@@ -577,9 +578,9 @@ const Home = () => {
                         className="flex text-2xl font-semibold text-accent"
                       >
                         Skills acquired:
-                        <SiCsharp />
-                        <AiFillGithub />
-                        <SiMysql />
+                        <SiCsharp className="m-1" />
+                        <AiFillGithub className="m-1"/>
+                        <SiMysql className="m-1"/>
                       </motion.a>
                     </div>
                   </div>
@@ -828,9 +829,12 @@ const Home = () => {
       </div>
 
       <div className="section" id="contact-me">
+      <div className="text-center text-5xl">
+          Get in touch
+        </div>
         <div className="  bg-base-100 md:flex"></div>
         <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
-        
+       
           <div>
             <div className="grid grid-flow-col gap-4">
               <a
