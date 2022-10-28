@@ -1,4 +1,4 @@
-import { AiFillHtml5, AiFillGithub } from 'react-icons/ai'
+import { AiFillHtml5, AiFillGithub, AiFillPhone } from 'react-icons/ai'
 
 import { FaCss3Alt, FaPython, FaPhp } from 'react-icons/fa'
 import {
@@ -11,7 +11,7 @@ import {
   SiReact,
   SiMysql,
 } from 'react-icons/si'
-import { MdEmail, MdOutlineEmail } from 'react-icons/md'
+import { MdEmail, MdOutlineEmail, MdLocationOn } from 'react-icons/md'
 import { BsLinkedin } from 'react-icons/bs'
 
 import { FiFramer } from 'react-icons/fi'
@@ -111,47 +111,24 @@ const Home = () => {
     setTheme(themes[randomNumber])
   }, [])
 
-  function lightTheme() {
-    setTheme('light')
-  }
 
-  function cupcakeTheme() {
-    setTheme('cupcake')
-  }
+  
 
-  function bumblebeeTheme() {
-    setTheme('bumblebee')
-  }
 
-  function emeraldTheme() {
-    setTheme('emerald')
-  }
   function corporateTheme() {
     setTheme('corporate')
   }
 
-  function myTheme() {
-    setTheme('mytheme')
-  }
+
 
   function synthwaveTheme() {
     setTheme('synthwave')
-  }
-  function retroTheme() {
-    setTheme('retro')
   }
 
   function cyberpunkTheme() {
     setTheme('cyberpunk')
   }
 
-  function valentineTheme() {
-    setTheme('valentine')
-  }
-
-  function halloweenTheme() {
-    setTheme('halloween')
-  }
 
   function forestTheme() {
     setTheme('forest')
@@ -169,29 +146,18 @@ const Home = () => {
     setTheme('fantasy')
   }
 
-  function wireframeTheme() {
-    setTheme('wireframe')
-  }
 
   function blackTheme() {
     setTheme('black')
   }
 
-  function cmykTheme() {
-    setTheme('cmyk')
-  }
+
 
   function autumnTheme() {
     setTheme('autumn')
   }
 
-  function acidTheme() {
-    setTheme('acid')
-  }
-
-  function lemonadeTheme() {
-    setTheme('lemonade')
-  }
+ 
 
   function coffeeTheme() {
     setTheme('coffee')
@@ -201,9 +167,6 @@ const Home = () => {
     setTheme('winter')
   }
 
-  function darkTheme() {
-    setTheme('dark')
-  }
 
   function draculaTheme() {
     setTheme('dracula')
@@ -227,7 +190,7 @@ const Home = () => {
               learning.
             </div>
             <div className="py-4 text-left">
-              <div className="text-xlm text-center font-semibold">Skills </div>
+              <div className="text-xl text-center font-semibold">Skills </div>
 
               <div>
                 Experience in full-stack web app development using frameworks
@@ -453,10 +416,10 @@ const Home = () => {
               <div className="tracking-loose ml-2 uppercase text-accent">
                 My experience
               </div>
-              <div className="mb-2 text-3xl leading-normal md:text-4xl md:leading-relaxed">
+              <div className="mb-2 text-3xl leading-normal lg:text-4xl lg:leading-relaxed">
                 Why Me?
               </div>
-              <div className="mb-4 text-sm  md:text-base">
+              <div className="mb-4 text-sm  lg:text-base">
                 Over a year of professional web dev experience.
               </div>
               <label
@@ -466,16 +429,16 @@ const Home = () => {
                 View CV
               </label>
             </div>
-            <div className="sticky ml-0 sm:ml-12 md:w-2/3">
+            <div className="sticky ml-0 sm:ml-12 lg:w-2/3">
               <div className="container mx-auto h-full w-full ">
-                <div className="wrap relative h-full overflow-hidden p-10  ">
-                  <div className="border-4-4  absolute  h-full border-y-0 border-x-2 px-60 "></div>
+                <div className="wrap relative h-full overflow-hidden p-5  ">
+                  <div className="border-4-4  absolute  h-full border-y-0 border-r-4 lg:px-60 md:px-40 "></div>
                  
 
-                  <div className="right-timeline mb-8 flex w-full flex-row items-center justify-between">
-                    <div className="order-1 w-5/12"></div>
+                  <div className="lg:mx-24 mx-4 right-timeline mb-8  flex w-full flex-row items-center md:mx-24 mx-4 ">
+                  <div className="order-1 md:w-5/12"></div>
 
-                    <div className="order-1 px-1 py-4 text-left md:w-5/12">
+                    <div className="order-1  py-4 text-left md:w-5/12">
                       <div className="mb-3 text-base text-secondary">
                         Started October 2022
                       </div>
@@ -491,19 +454,19 @@ const Home = () => {
                         variants={name}
                         initial="hidden"
                         whileInView="visible"
-                        className="flex text-2xl  font-semibold text-accent"
+                        className="flex  text-2xl  font-semibold text-accent"
                       >
                         Skills acquired:
-                        <FaPython />
-                        <FaPhp />
+                        <FaPython className="m-1"/>
+                        <FaPhp className="m-1"/>
                       </motion.a>
                     </div>
                   </div>
 
-                  <div className="right-timeline mb-8 ml-3 flex w-full flex-row-reverse items-center justify-between">
-                    <div className="order-1 w-5/12"></div>
+                  <div className="flex-row mx-4 text-left lg:mx-20 mb-8 flex w-full items-center justify-between">
+            
 
-                    <div className="order-1 px-1 py-4 md:w-5/12 lg:text-right xs:text-left">
+                    <div className="order-1 py-4 text-left md:w-5/12">
                       {/* <motion.div
                         variants={timelineCard}
                         initial="hidden"
@@ -526,25 +489,28 @@ const Home = () => {
                         - Developed a native C# app to allow deeper native
                         integration via a web extension.
                       </div>
-                      <motion.a
+                      <div className="">
+                      <motion.div
                         variants={timelineCard}
                         initial="hidden"
                         whileInView="visible"
-                        className="flex text-2xl  font-semibold text-accent"
+                        className="flex text-2xl font-semibold text-accent"
                       >
                         Skills acquired:
                         <SiNextdotjs className="m-1" />{' '}
                         <SiPostgresql className="m-1" />
                         <FaCss3Alt className="m-1" />
-                      </motion.a>
+                      </motion.div>
+                      </div>
+                     
                       {/* </motion.div> */}
                     </div>
                   </div>
 
-                  <div className="right-timeline mb-8 flex w-full items-center justify-between">
+                  <div className="right-timeline mb-8 flex w-full items-center md:mx-24 mx-4">
                     <div className="order-1 md:w-5/12"></div>
 
-                    <div className="order-1  px-1 py-4 text-left md:w-5/12">
+                    <div className="order-1  py-4 text-left md:w-5/12">
                       {/* <motion.div
                         variants={timelineCard}
                         initial="hidden"
@@ -586,10 +552,11 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="left-timeline mb-8 ml-3 flex w-full flex-row-reverse items-center justify-between lg:text-right xs:text-left">
-                    <div className="order-1 md:w-5/12"></div>
+   
+                  <div className="flex-row mx-4 text-left lg:mx-20 mb-8 flex w-full items-center justify-between">
+                    
 
-                    <div className="order-1 px-1 py-4 md:w-5/12 ">
+                    <div className="order-1 md:w-5/12 ">
                       {/* <motion.div
                         variants={timelineCard}
                         initial="hidden"
@@ -800,13 +767,13 @@ const Home = () => {
                 </ul>
               </motion.div>
 
-              <div className="absolute z-10  text-center md:bottom-24 lg:top-80 xs:bottom-20">
+              <div className=" z-10 xs:py-64 sm:my-64 md:my-36 lg:my-0 text-center ">
                 <div className="">
                   <motion.h1
                     variants={name}
                     initial="hidden"
                     animate="visible"
-                    className="m-1  my-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text   text-left font-bungee-shade   text-5xl font-extrabold text-transparent  md:text-8xl lg:text-7xl xl:text-7xl"
+                    className="m-1  my-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text   text-left font-bungee-shade   text-5xl font-extrabold text-transparent  md:text-8xl  lg:text-7xl xl:text-7xl"
                   >
                     Finn Jefferis
                     <br />
@@ -871,14 +838,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="section co" id="contact-me">
+      {/* <div className="section co" id="contact-me">
         <div className="text-center  font-bungee-shade text-6xl ">
           Get in touch
         </div>
 
-        <div class="grid grid-cols-2 grid-rows-3 gap-2 overflow-hidden text-center">
-          <div class="box"> - business email? + icons</div>
-          <div class="box row-span-3 ">
+        <div className="grid grid-cols-2 grid-rows-3 gap-2 overflow-hidden text-center">
+          <div className="box"> - business email? <MdOutlineEmail/></div>
+          <div className="box row-span-3 ">
             <div>
               <div className="mockup-code my-5 md:mx-96" id="why-me">
                 <pre data-prefix="$" className="text-warning">
@@ -899,8 +866,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div class="box">- business phone? + icons</div>
-          <div class="box"> - general location + icons</div>
+          <div className="box">- business phone? <AiFillPhone/></div>
+          <div className="box"> - general location <MdLocationOn/></div>
         </div>
 
         <div className="  bg-base-100 md:flex"></div>
@@ -932,7 +899,35 @@ const Home = () => {
             </div>
           </div>
         </footer>
-      </div>
+      </div> */}
+           <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
+          <div>
+            <div className="grid grid-flow-col gap-4">
+              <a
+                href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
+                className=""
+              >
+                <span>
+                  <BsLinkedin size={30} />
+                </span>
+              </a>
+              <a href="https://github.com/finnjefferis" className="">
+                <span>
+                  <AiFillGithub size={30} />
+                </span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
+                className=""
+              >
+                <span>
+                  <MdEmail size={30} />
+                </span>
+              </a>
+            </div>
+          </div>
+        </footer>
     </div>
   )
 }
