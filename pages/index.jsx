@@ -129,6 +129,7 @@ const Home = () => {
     setTheme('cyberpunk')
   }
 
+  
 
   function forestTheme() {
     setTheme('forest')
@@ -182,7 +183,7 @@ const Home = () => {
         <input type="checkbox" id="my-modal-4" className="modal-toggle" />
         <label htmlFor="my-modal-4" className="modal cursor-pointer">
           <label className="modal-box relative" htmlFor="">
-            <h1 className="text-xl font-bold">Finn Jefferis</h1>
+            <h1 className="text-xl  font-bold">Finn Jefferis</h1>
             <h3 className=" font-semibold">Professional Summary</h3>
             <div>
               Software developer with solid foundational knowledge, experience
@@ -612,27 +613,10 @@ const Home = () => {
   }
 
   function applyTheme() {
-    let primaryColour = '#fffff'
-    let secondaryColour = '#fffff'
-    let accentColor = '#fffff'
-
-    let data = {
-      primary: primaryColour,
-      secondary: secondaryColour,
-      accent: accentColor,
-    }
-
-    //api call to post selected colours through
-
-    fetch('http://localhost:3000/api/theme', {
-      method: 'POST', // or 'PUT'
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
+    console.log("Theme applied")
+    // document.documentElement.style
+    // .setProperty('--primary-colour', "#00FF00");
+    // setTheme('myTheme')
   }
 
   function ThemeGenerator() {
@@ -736,9 +720,7 @@ const Home = () => {
                   <li>
                     <a onClick={synthwaveTheme}>Synthwave</a>
                   </li>
-                  {/* <li>
-                    <a onClick={myTheme}/>
-                  </li> */}
+                
                   <li>
                     <a onClick={cyberpunkTheme}>Cyberpunk</a>
                   </li>
@@ -763,7 +745,7 @@ const Home = () => {
                   <li>
                     <a onClick={winterTheme}>Winter</a>
                   </li>
-                  {/* <label htmlFor="theme-modal" className="btn modal-button">???</label> */}
+                   <label htmlFor="theme-modal" className="btn modal-button">???</label> 
                 </ul>
               </motion.div>
 
@@ -773,7 +755,7 @@ const Home = () => {
                     variants={name}
                     initial="hidden"
                     animate="visible"
-                    className="m-1  my-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text   text-left font-bungee-shade   text-5xl font-extrabold text-transparent  md:text-8xl  lg:text-7xl xl:text-7xl"
+                    className="m-1 md:mt-20 lg:mt-0 my-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text   text-left font-bungee-shade   text-5xl font-extrabold text-transparent  md:text-8xl  lg:text-7xl xl:text-7xl"
                   >
                     Finn Jefferis
                     <br />
@@ -838,71 +820,23 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className="section co" id="contact-me">
-        <div className="text-center  font-bungee-shade text-6xl ">
+       <div className="section co" id="contact-me">
+        <div                    className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text   font-bungee-shade   text-7xl font-extrabold text-transparent text-center">
           Get in touch
         </div>
 
-        <div className="grid grid-cols-2 grid-rows-3 gap-2 overflow-hidden text-center">
-          <div className="box"> - business email? <MdOutlineEmail/></div>
-          <div className="box row-span-3 ">
-            <div>
-              <div className="mockup-code my-5 md:mx-96" id="why-me">
-                <pre data-prefix="$" className="text-warning">
-                  <code>Got a quick question?</code>
-                </pre>
-
-                <pre data-prefix=">" className="">
-                  <code>waste no time!</code>
-                </pre>
-
-                <pre data-prefix=">" className="text-warning ">
-                  <code>ask right here!</code>
-                </pre>
-
-                <pre data-prefix=">" className="">
-                  <code>link to chat bot?...</code>
-                </pre>
-              </div>
-            </div>
-          </div>
+        <div className=" overflow-hidden text-center p-80 ">
+          <div className="box"> - finnjefferis@gmail.com <MdOutlineEmail/></div>
+      
           <div className="box">- business phone? <AiFillPhone/></div>
-          <div className="box"> - general location <MdLocationOn/></div>
+          <div className="box"> - Brighton, UK <MdLocationOn/></div>
         </div>
 
-        <div className="  bg-base-100 md:flex"></div>
-        <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
-          <div>
-            <div className="grid grid-flow-col gap-4">
-              <a
-                href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
-                className=""
-              >
-                <span>
-                  <BsLinkedin size={30} />
-                </span>
-              </a>
-              <a href="https://github.com/finnjefferis" className="">
-                <span>
-                  <AiFillGithub size={30} />
-                </span>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
-                className=""
-              >
-                <span>
-                  <MdEmail size={30} />
-                </span>
-              </a>
-            </div>
-          </div>
-        </footer>
-      </div> */}
-           <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
-          <div>
-            <div className="grid grid-flow-col gap-4">
+       
+      </div> 
+           <footer className="footer footer-center bg-secondary p-10 text-secondary-content ">
+          <div className="">
+            <div className="grid grid-flow-col gap-4 ">
               <a
                 href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
                 className=""
