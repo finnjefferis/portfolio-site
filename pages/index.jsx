@@ -68,15 +68,11 @@ const Home = () => {
     visible: { opacity: 1, transition: { delay: 0.3 } },
   }
 
-<<<<<<< Updated upstream
-
-=======
   
   const waves = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { delay: 0.9 } },
   }
->>>>>>> Stashed changes
 
   const name = {
     hidden: { opacity: 0 },
@@ -1196,8 +1192,6 @@ const Home = () => {
     )
   }
 
-<<<<<<< Updated upstream
-=======
   function Modal() {
     return (
       <div>
@@ -1735,8 +1729,8 @@ const Home = () => {
     )
   }
 
->>>>>>> Stashed changes
   return (
+    
     <div data-theme={theme}>
       <Head>
         <title>Portfolio</title>
@@ -1918,109 +1912,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className="section co" id="contact-me">
-        <div className="text-center  font-bungee-shade text-6xl ">
-          Get in touch
-        </div>
-
-        <div className="grid grid-cols-2 grid-rows-3 gap-2 overflow-hidden text-center">
-          <div className="box"> - business email? <MdOutlineEmail/></div>
-          <div className="box row-span-3 ">
-            <div>
-              <div className="mockup-code my-5 md:mx-96" id="why-me">
-                <pre data-prefix="$" className="text-warning">
-                  <code>Got a quick question?</code>
-                </pre>
-
-            <div className="box flex text-2xl  justify-center">
-            <AiFillPhone className="text-primary m-1"/>   business phone? 
-            </div>
-            <div className="box flex text-2xl justify-center">
-              
-            <MdLocationOn className="text-primary m-1"/>  Brighton, UK
-            </div>
-          </div>
-          <div className="item mockup-code text-center m-16">
-          <pre data-prefix="$">
-              <code>Anything to ask?</code>
-            </pre>
-            <pre data-prefix="$">
-              <code>Send me a message!</code>
-            </pre>
          
-            <pre data-prefix=">" className="text-warning ">
-              <code>
-                
-               
-                <motion.a animate={{ opacity: [0, 1, 1, 0] }}   transition={{ repeat: Infinity, delay: 0.5}}
-                 className="h-6 w-4 bg-warning"> </motion.a><input className="bg-black" />
-              </code>
-            </pre>
-          
-          </div>
-          <div className="box">- business phone? <AiFillPhone/></div>
-          <div className="box"> - general location <MdLocationOn/></div>
-        </div>
-
-        <div className="  bg-base-100 md:flex"></div>
-        <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
-          <div>
-            <div className="grid grid-flow-col gap-4">
-              <a
-                href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
-                className=""
-              >
-                <span>
-                  <BsLinkedin size={30} />
-                </span>
-              </a>
-              <a href="https://github.com/finnjefferis" className="">
-                <span>
-                  <AiFillGithub size={30} />
-                </span>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
-                className=""
-              >
-                <span>
-                  <MdEmail size={30} />
-                </span>
-              </a>
-            </div>
-          </div>
-        </footer>
-      </div> */}
-           <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
-          <div>
-            <div className="grid grid-flow-col gap-4">
-              <a
-                href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
-                className=""
-              >
-                <span>
-                  <BsLinkedin size={30} />
-                </span>
-              </a>
-              <a href="https://github.com/finnjefferis" className="">
-                <span>
-                  <AiFillGithub size={30} />
-                </span>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/finlay-jefferis-80a417234/"
-                className=""
-              >
-                <span>
-                  <MdEmail size={30} />
-                </span>
-              </a>
-            </div>
-          </div>
-        </footer>
-      </div> */}
+      
            <footer className="footer footer-center bg-secondary p-10 text-secondary-content">
           <div>
             <div className="grid grid-flow-col gap-4">
