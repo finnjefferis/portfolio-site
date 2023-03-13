@@ -39,49 +39,35 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        // mytheme: {
-          
-
- 
-        //   "primary": primaryColor,
+        lava: {
+          "primary": '#f56967',
+          "primary-content":'#fa7268',
+          "primary-focus": '#ef5f67',
                     
           
            
-        //   "secondary": secondaryColor,
-                    
+          "secondary": '#e34c67',
+          "secondary-focus":"#e34c67",
+          "secondary-content": "#e95667",       
           
            
-        //   "accent": accentColor,
-                    
+          "accent": '#ce2e68',
+                    "accent-focus": '#c62368',
+                    "accent-content": '#d53867',
           
            
-        //   "neutral": "#282334",
-                    
-          
-           
-        //   "base-100": "#282046",
-                    
-          
-           
-        //   "info": "#9FAFF4",
-                    
-          
-           
-        //   "success": "#16B653",
-                    
-          
-           
-        //   "warning": "#B0740C",
-                    
-          
-           
-        //   "error": "#E95D75",
-        //             },
+          "neutral": "#282334",
+          "base-100": "#282046",
+          "info": "#9FAFF4",
+          "success": "#16B653",
+          "warning": "#B0740C",
+          "error": "#E95D75",
+                    },
       },
-      'light',
-      'dark',
-      'cupcake',
-      'bumblebee',
+      {lofi: {  ...require("daisyui/src/colors/themes")["[data-theme=lofi]"],
+      primary: "blue",
+          "primary-focus": "mediumblue",}},
+  
       'emerald',
       'corporate',
       'synthwave',
@@ -92,13 +78,16 @@ module.exports = {
       'garden',
       'forest',
       'aqua',
-      'lofi',
+    
       'pastel',
       'fantasy',
       'wireframe',
       'black',
       'luxury',
-      'dracula',
+  
+      {dracula: {  ...require("daisyui/src/colors/themes")["[data-theme=dracula]"],
+      primary: "red",
+          "primary-light": "mediumblue",}},
       'cmyk',
       'autumn',
       'business',
