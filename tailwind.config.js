@@ -104,9 +104,10 @@ module.exports = {
           '--gradient-600': '167, 88%, 35%',
           '--gradient-700': '170, 86%, 36%',
           '--gradient-800': '170, 83%, 31%',
-          '--gradient-900': '170, 80%, 26%',
-
-          secondary: '#e34c67',
+          '--gradient-900': '170, 80%, 30%',
+          primary: '#0d7766',
+          accent: '#0ba886',
+          secondary: '#00ff95',
           'secondary-focus': '#e34c67',
           'secondary-content': '#e95667',
 
@@ -167,9 +168,21 @@ module.exports = {
           '--gradient-900': '13 80% 63%;',
         },
       },
+      {
+        synthwave: {
+          ...require('daisyui/src/colors/themes')['[data-theme=synthwave]'],
+          '--gradient-100': '321, 38%, 54%',
+          '--gradient-200': '307, 28%, 50%',
+          '--gradient-300': '285, 26%, 51%',
+          '--gradient-400': '266, 27%, 52%',
+          '--gradient-500': '246, 26%, 53%',
 
-      'synthwave',
-
+          '--gradient-600': '228, 30%, 50%',
+          '--gradient-700': '216, 39%, 45%',
+          '--gradient-800': '208, 50%, 40%',
+          '--gradient-900': '201, 62%, 35%',
+        },
+      },
       'forest',
 
       'fantasy',
@@ -179,16 +192,16 @@ module.exports = {
       {
         dracula: {
           ...require('daisyui/src/colors/themes')['[data-theme=dracula]'],
-          '--gradient-100': '31, 98%, 67%',
-          '--gradient-200': '31, 96%, 62%',
-          '--gradient-300': '31, 94%, 57%',
-          '--gradient-400': '31, 92%, 52%',
-          '--gradient-500': '31, 90%, 47%',
+          '--gradient-100': '31.07, 96.55%, 44.12%',
+          '--gradient-200': '21.68, 58.05%, 40.2%',
+          '--gradient-300': '13.7, 42.99%, 41.96%',
+          '--gradient-400': '1.74, 31.51%, 42.94%',
+          '--gradient-500': '347, 29.13%, 40.39%',
 
-          '--gradient-600': '265 69% 63%',
-          '--gradient-700': '265 65% 58%',
-          '--gradient-800': '265 64% 53%',
-          '--gradient-900': '265 59% 48%',
+          '--gradient-600': '328.89, 28.42%, 37.25%',
+          '--gradient-700': '305, 27.91%, 33.73%',
+          '--gradient-800': '281.05, 33.33%, 33.53%',
+          '--gradient-900': '265, 41.86%, 33.73%',
         },
       },
 
@@ -200,10 +213,10 @@ module.exports = {
           '--gradient-200': '31, 100%, 62%',
           '--gradient-300': '31, 100%, 57%',
           '--gradient-400': '31, 95%, 52%',
-          '--gradient-500': '20, 90%, 50%',
+          '--gradient-500': '28, 90%, 50%',
 
-          '--gradient-600': '20, 90%, 50%',
-          '--gradient-700': '13 85% 50%',
+          '--gradient-600': '23, 90%, 50%',
+          '--gradient-700': '18 85% 50%',
           '--gradient-800': '13 80% 48%',
           '--gradient-900': '13 75% 42%;',
         },
