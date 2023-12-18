@@ -330,7 +330,6 @@ const Home = () => {
                       >
                         Skills acquired:
                         <FaPython className="m-1" />
-                        <FaPhp className="m-1" />
                       </motion.a>
                     </div>
                   </div>
@@ -724,7 +723,7 @@ const Home = () => {
                       >
                         Skills acquired:
                         <FaPython className="m-1" />
-                        <FaPhp className="m-1" />
+                        <SiCsharp className="m-1" />
                       </motion.a>
                     </div>
                   </div>
@@ -1200,6 +1199,40 @@ const Home = () => {
                 <div className="wrap relative h-full overflow-hidden p-5  ">
                   {/* <div className="border-4-4  absolute  h-full border-y-0 border-r-4 lg:px-60 md:px-40 "></div>
                    */}
+
+                  <div className="right-timeline mx-4 mx-4 mb-8  flex w-full flex-row items-center md:mx-24 lg:mx-24 ">
+                    <div className="order-1 md:w-5/12"></div>
+
+                    <div className="order-1  py-4 text-left md:w-5/12">
+                      <div className="mb-3 text-base text-secondary">
+                        Started September 2023
+                      </div>
+                      <h4 className="mb-3  font-bold md:text-2xl">
+                        Software Engineer at Trident Intelligent Solutions
+                      </h4>
+                      <div className=" my-1 leading-snug  text-opacity-100 md:text-base">
+                        - Oversaw development of bespoke software solutions for
+                        a variety of clients in the water industry.
+                      </div>
+                      <div className=" my-1 leading-snug  text-opacity-100 md:text-base">
+                        {' '}
+                        - Communicated effectively with clients and shareholders
+                        to ensure my projects are a success
+                      </div>
+                      <div className=" my-1 leading-snug  text-opacity-100 md:text-base "></div>
+                      <motion.a
+                        variants={name}
+                        initial="hidden"
+                        whileInView="visible"
+                        className="flex  text-2xl  font-semibold text-accent"
+                      >
+                        Skills acquired:
+                        <FaPython className="m-1" />
+                        <FaPhp className="m-1" />
+                      </motion.a>
+                    </div>
+                  </div>
+
                   <div className="right-timeline mx-4 mx-4 mb-8  flex w-full flex-row items-center md:mx-24 lg:mx-24 ">
                     <div className="order-1  py-4 text-left md:w-5/12">
                       <div className="mb-3 text-base text-secondary">
